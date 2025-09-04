@@ -15,5 +15,20 @@
     "rondonia"
   ],
   "author": "Bonfim Imobiliária",
-  "license": "MIT"
+  "license": "MIT",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigofblopes/BonfimImobiliaria.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rodrigofblopes/BonfimImobiliaria/issues"
+  },
+  "homepage": "https://github.com/rodrigofblopes/BonfimImobiliaria#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.1.12"
+  }
 }

@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+:root {
+    --black: #403F3F;
+    --deep-yellow: #BF9A2C;
+    --deep-yellow-accent: #F2AE2E;
+    --yellow: #F2C12E;
+    --yellow-accent: #FECF27;
+    --yellow-logo: #FECF27;
+    --white-accent: #F8F8F8;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.hero-bg {
+    background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.promo-gradient {
+    background: linear-gradient(135deg, #F2C12E 0%, #FECF27 100%);
+}
+
+.search-form {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.icon-hover {
+    transition: all 0.3s ease;
+}
+
+.icon-hover:hover {
+    transform: scale(1.1);
+    color: #FECF27;
+}
