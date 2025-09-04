@@ -1,0 +1,167 @@
+[
+  {
+    "titulo": "Terreno 200m² - Centro",
+    "preco": 50000,
+    "area": 200,
+    "preco_m2": 250.00,
+    "bairro": "Centro",
+    "tipo": "terreno",
+    "fonte": "VivaReal",
+    "data_coleta": "2024-01-15T10:30:00",
+    "localizacao": "Rua Principal, Centro"
+  },
+  {
+    "titulo": "Lote 300m² - Nova Porto Velho",
+    "preco": 45000,
+    "area": 300,
+    "preco_m2": 150.00,
+    "bairro": "Nova Porto Velho",
+    "tipo": "lote",
+    "fonte": "Zap Imóveis",
+    "data_coleta": "2024-01-15T10:35:00",
+    "localizacao": "Av. Central, Nova Porto Velho"
+  },
+  {
+    "titulo": "Terreno 150m² - Trio",
+    "preco": 60000,
+    "area": 150,
+    "preco_m2": 400.00,
+    "bairro": "Trio",
+    "tipo": "terreno",
+    "fonte": "VivaReal",
+    "data_coleta": "2024-01-15T10:40:00",
+    "localizacao": "Rua das Flores, Trio"
+  },
+  {
+    "titulo": "Lote 250m² - Caiari",
+    "preco": 35000,
+    "area": 250,
+    "preco_m2": 140.00,
+    "bairro": "Caiari",
+    "tipo": "lote",
+    "fonte": "OLX",
+    "data_coleta": "2024-01-15T10:45:00",
+    "localizacao": "Travessa do Rio, Caiari"
+  },
+  {
+    "titulo": "Terreno 180m² - Areal",
+    "preco": 72000,
+    "area": 180,
+    "preco_m2": 400.00,
+    "bairro": "Areal",
+    "tipo": "terreno",
+    "fonte": "VivaReal",
+    "data_coleta": "2024-01-15T10:50:00",
+    "localizacao": "Rua da Praia, Areal"
+  },
+  {
+    "titulo": "Lote 400m² - Embratel",
+    "preco": 80000,
+    "area": 400,
+    "preco_m2": 200.00,
+    "bairro": "Embratel",
+    "tipo": "lote",
+    "fonte": "Zap Imóveis",
+    "data_coleta": "2024-01-15T10:55:00",
+    "localizacao": "Av. das Telecomunicações, Embratel"
+  },
+  {
+    "titulo": "Terreno 120m² - Cidade Nova",
+    "preco": 48000,
+    "area": 120,
+    "preco_m2": 400.00,
+    "bairro": "Cidade Nova",
+    "tipo": "terreno",
+    "fonte": "VivaReal",
+    "data_coleta": "2024-01-15T11:00:00",
+    "localizacao": "Rua da Inovação, Cidade Nova"
+  },
+  {
+    "titulo": "Lote 350m² - Jardim América",
+    "preco": 52500,
+    "area": 350,
+    "preco_m2": 150.00,
+    "bairro": "Jardim América",
+    "tipo": "lote",
+    "fonte": "OLX",
+    "data_coleta": "2024-01-15T11:05:00",
+    "localizacao": "Alameda das Palmeiras, Jardim América"
+  },
+  {
+    "titulo": "Terreno 220m² - Jardim Europa",
+    "preco": 66000,
+    "area": 220,
+    "preco_m2": 300.00,
+    "bairro": "Jardim Europa",
+    "tipo": "terreno",
+    "fonte": "Zap Imóveis",
+    "data_coleta": "2024-01-15T11:10:00",
+    "localizacao": "Rua das Acácias, Jardim Europa"
+  },
+  {
+    "titulo": "Lote 280m² - Jardim Tropical",
+    "preco": 42000,
+    "area": 280,
+    "preco_m2": 150.00,
+    "bairro": "Jardim Tropical",
+    "tipo": "lote",
+    "fonte": "VivaReal",
+    "data_coleta": "2024-01-15T11:15:00",
+    "localizacao": "Av. das Palmeiras, Jardim Tropical"
+  },
+  {
+    "titulo": "Terreno 160m² - Centro",
+    "preco": 56000,
+    "area": 160,
+    "preco_m2": 350.00,
+    "bairro": "Centro",
+    "tipo": "terreno",
+    "fonte": "OLX",
+    "data_coleta": "2024-01-15T11:20:00",
+    "localizacao": "Rua do Comércio, Centro"
+  },
+  {
+    "titulo": "Lote 320m² - Nova Porto Velho",
+    "preco": 48000,
+    "area": 320,
+    "preco_m2": 150.00,
+    "bairro": "Nova Porto Velho",
+    "tipo": "lote",
+    "fonte": "VivaReal",
+    "data_coleta": "2024-01-15T11:25:00",
+    "localizacao": "Rua da Expansão, Nova Porto Velho"
+  },
+  {
+    "titulo": "Terreno 190m² - Trio",
+    "preco": 66500,
+    "area": 190,
+    "preco_m2": 350.00,
+    "bairro": "Trio",
+    "tipo": "terreno",
+    "fonte": "Zap Imóveis",
+    "data_coleta": "2024-01-15T11:30:00",
+    "localizacao": "Rua dos Ipês, Trio"
+  },
+  {
+    "titulo": "Lote 270m² - Caiari",
+    "preco": 37800,
+    "area": 270,
+    "preco_m2": 140.00,
+    "bairro": "Caiari",
+    "tipo": "lote",
+    "fonte": "VivaReal",
+    "data_coleta": "2024-01-15T11:35:00",
+    "localizacao": "Travessa do Cais, Caiari"
+  },
+  {
+    "titulo": "Terreno 140m² - Areal",
+    "preco": 58800,
+    "area": 140,
+    "preco_m2": 420.00,
+    "bairro": "Areal",
+    "tipo": "terreno",
+    "fonte": "OLX",
+    "data_coleta": "2024-01-15T11:40:00",
+    "localizacao": "Rua da Areia, Areal"
+  }
+]

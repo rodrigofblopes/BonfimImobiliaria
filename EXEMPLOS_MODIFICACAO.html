@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Modificação - Template Lage Imóveis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .example {
+            border: 2px solid #1e3c72;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f8f9fa;
+        }
+        
+        .code {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        
+        .highlight {
+            background: #ffd700;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .color-palette {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        
+        .color-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            border: 2px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        h1, h2, h3 {
+            color: #1e3c72;
+        }
+        
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎨 Exemplos de Modificação do Template Lage Imóveis</h1>
+    
+    <div class="success">
+        <strong>✅ Status:</strong> Template funcionando em <a href="http://localhost:8000/site_local.html" target="_blank">http://localhost:8000/site_local.html</a>
+    </div>
+
+    <h2>1. 🌈 Alterando Cores da Marca</h2>
+    <div class="example">
+        <h3>Paleta de Cores Atual:</h3>
+        <div class="color-palette">
+            <div class="color-box" style="background: #1e3c72;">#1e3c72<br>Azul Principal</div>
+            <div class="color-box" style="background: #2a5298;">#2a5298<br>Azul Secundário</div>
+            <div class="color-box" style="background: #ffd700; color: #333;">#ffd700<br>Dourado</div>
+            <div class="color-box" style="background: #333;">#333<br>Texto</div>
+        </div>
+        
+        <h3>Como alterar para suas cores:</h3>
+        <div class="code">
+/* Substitua no arquivo site_local.html */
+.header {
+    background: linear-gradient(135deg, <span class="highlight">#SUA_COR1</span> 0%, <span class="highlight">#SUA_COR2</span> 100%);
+}
+
+.logo {
+    color: <span class="highlight">#SUA_COR_ACENTO</span>;
+}
+
+.cta-button {
+    background: <span class="highlight">#SUA_COR_BOTAO</span>;
+}
+        </div>
+        
+        <p><strong>Exemplo:</strong> Para uma imobiliária com tema verde:</p>
+        <div class="code">
+.header {
+    background: linear-gradient(135deg, #2d5016 0%, #4a7c59 100%);
+}
+
+.logo {
+    color: #90EE90;
+}
+        </div>
+    </div>
+
+    <h2>2. 🏠 Alterando Informações da Imobiliária</h2>
+    <div class="example">
+        <h3>Modificações no Header:</h3>
+        <div class="code">
+&lt;div class="logo"&gt;🏠 <span class="highlight">Sua Imobiliária</span>&lt;/div&gt;
+&lt;ul class="nav-links"&gt;
+    &lt;li&gt;&lt;a href="#home"&gt;<span class="highlight">Início</span>&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#properties"&gt;<span class="highlight">Imóveis</span>&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#about"&gt;<span class="highlight">Sobre</span>&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#contact"&gt;<span class="highlight">Contato</span>&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+        </div>
+        
+        <h3>Modificações no Hero:</h3>
+        <div class="code">
+&lt;h1&gt;<span class="highlight">Seu Título Principal</span>&lt;/h1&gt;
+&lt;p&gt;<span class="highlight">Sua descrição personalizada</span>&lt;/p&gt;
+        </div>
+    </div>
+
+    <h2>3. 📍 Alterando Localização e Contato</h2>
+    <div class="example">
+        <h3>Informações de Contato:</h3>
+        <div class="code">
+&lt;div class="contact-info"&gt;
+    &lt;h3&gt;📞 Informações de Contato&lt;/h3&gt;
+    &lt;p&gt;&lt;strong&gt;Telefone:&lt;/strong&gt; <span class="highlight">(31) 9999-9999</span>&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;WhatsApp:&lt;/strong&gt; <span class="highlight">(31) 8888-8888</span>&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; <span class="highlight">contato@suaempresa.com.br</span>&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Endereço:&lt;/strong&gt; <span class="highlight">Sua Rua, 123 - Seu Bairro, Sua Cidade - MG</span>&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Horário:&lt;/strong&gt; <span class="highlight">Segunda a Sexta: 9h às 18h | Sábado: 9h às 13h</span>&lt;/p&gt;
+&lt;/div&gt;
+        </div>
+    </div>
+
+    <h2>4. 🖼️ Adicionando Suas Próprias Imagens</h2>
+    <div class="example">
+        <h3>Substituindo Imagens:</h3>
+        <div class="code">
+&lt;!-- Imagem do Hero --&gt;
+&lt;section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+    url('<span class="highlight">caminho/para/sua/imagem.jpg</span>');"&gt;
+
+&lt;!-- Imagens dos Imóveis --&gt;
+&lt;img src="<span class="highlight">caminho/para/imovel1.jpg</span>" alt="Descrição do Imóvel" class="property-image"&gt;
+        </div>
+        
+        <p><strong>Dicas:</strong></p>
+        <ul>
+            <li>Use imagens com proporção 16:9 para o hero</li>
+            <li>Use imagens quadradas (500x500px) para os imóveis</li>
+            <li>Otimize as imagens para web (máximo 500KB)</li>
+            <li>Use formatos .jpg para fotos e .png para logos</li>
+        </ul>
+    </div>
+
+    <h2>5. 🎯 Adicionando Novas Seções</h2>
+    <div class="example">
+        <h3>Exemplo: Seção "Sobre Nós":</h3>
+        <div class="code">
+&lt;!-- Adicione antes da seção de contato --&gt;
+&lt;section id="about" class="features"&gt;
+    &lt;div class="container"&gt;
+        &lt;h2 class="section-title"&gt;Sobre Nossa Empresa&lt;/h2&gt;
+        &lt;div class="features-grid"&gt;
+            &lt;div class="feature-card"&gt;
+                &lt;div class="feature-icon"&gt;🏆&lt;/div&gt;
+                &lt;h3&gt;Nossa História&lt;/h3&gt;
+                &lt;p&gt;Descrição da história da sua empresa...&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="feature-card"&gt;
+                &lt;div class="feature-icon"&gt;🎯&lt;/div&gt;
+                &lt;h3&gt;Nossa Missão&lt;/h3&gt;
+                &lt;p&gt;Descrição da missão da sua empresa...&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+        </div>
+    </div>
+
+    <h2>6. 📱 Personalizando para Mobile</h2>
+    <div class="example">
+        <h3>Media Queries para Mobile:</h3>
+        <div class="code">
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: <span class="highlight">2rem</span>; /* Tamanho para mobile */
+    }
+    
+    .hero-content p {
+        font-size: <span class="highlight">1rem</span>; /* Tamanho para mobile */
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: <span class="highlight">0.5rem</span>; /* Espaçamento menor */
+    }
+}
+        </div>
+    </div>
+
+    <h2>7. 🔧 Funcionalidades JavaScript</h2>
+    <div class="example">
+        <h3>Adicionando Contador de Imóveis:</h3>
+        <div class="code">
+&lt;script&gt;
+// Adicione no final do arquivo, antes de &lt;/body&gt;
+function updatePropertyCount() {
+    const properties = document.querySelectorAll('.property-card');
+    const count = properties.length;
+    
+    // Adicione um elemento para mostrar o contador
+    const counter = document.createElement('div');
+    counter.innerHTML = `Total de Imóveis: ${count}`;
+    counter.style.cssText = 'text-align: center; font-size: 1.2rem; color: #1e3c72; margin: 20px 0;';
+    
+    // Insere antes da seção de propriedades
+    const propertiesSection = document.querySelector('#properties .container');
+    propertiesSection.insertBefore(counter, propertiesSection.firstChild);
+}
+
+// Executa quando a página carrega
+document.addEventListener('DOMContentLoaded', updatePropertyCount);
+&lt;/script&gt;
+        </div>
+    </div>
+
+    <h2>8. 🎨 Personalizando Animações</h2>
+    <div class="example">
+        <h3>Adicionando Efeitos de Hover:</h3>
+        <div class="code">
+/* Adicione no CSS */
+.property-card {
+    transition: all 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.feature-card:hover {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+}
+
+.feature-card:hover .feature-icon {
+    color: #ffd700;
+}
+        </div>
+    </div>
+
+    <div class="warning">
+        <strong>⚠️ Importante:</strong> Sempre faça backup do arquivo antes de fazer modificações!
+    </div>
+
+    <div class="success">
+        <strong>🚀 Próximo Passo:</strong> 
+        <a href="http://localhost:8000/site_local.html" target="_blank">Abra o template</a> e comece a personalizar!
+    </div>
+
+    <h2>📋 Checklist de Modificações Recomendadas:</h2>
+    <div class="example">
+        <ul>
+            <li>☐ Alterar nome da empresa</li>
+            <li>☐ Alterar cores da marca</li>
+            <li>☐ Atualizar informações de contato</li>
+            <li>☐ Adicionar suas próprias imagens</li>
+            <li>☐ Personalizar textos e descrições</li>
+            <li>☐ Adicionar logo da empresa</li>
+            <li>☐ Configurar redes sociais</li>
+            <li>☐ Testar em diferentes dispositivos</li>
+            <li>☐ Otimizar para SEO</li>
+        </ul>
+    </div>
+
+    <script>
+        // Exemplo de funcionalidade adicional
+        console.log('Exemplos de modificação carregados!');
+        
+        // Adiciona data de última atualização
+        const lastUpdate = document.createElement('p');
+        lastUpdate.innerHTML = `<em>Última atualização: ${new Date().toLocaleDateString('pt-BR')}</em>`;
+        lastUpdate.style.textAlign = 'center';
+        lastUpdate.style.color = '#666';
+        lastUpdate.style.marginTop = '30px';
+        document.body.appendChild(lastUpdate);
+    </script>
+</body>
+</html>

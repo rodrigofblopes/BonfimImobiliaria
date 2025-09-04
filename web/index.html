@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-171548191-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-171548191-1");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta
+      name="description"
+      content="Imóveis em ipatinga, imobiliaria ipatinga, venda, locação de imoveis residenciais, comerciais e rurais, minas gerais, vale do aço, imobiliaria em ipatinga mg, imobiliarias no brasil, imobiliária em minas gerais, administração de imóveis - Lage Imóveis CRECI 1915"
+    />
+    <meta
+      name="keywords"
+      content="imovel, imoveis, apartamentos, casa, lotes, lage, imobiliárias, imobiliaria, coberturas, casas, loteamentos, aluguel, vendas, empreendimentos, imovel na planta,montagem, ipatinga, coronel fabriciano, timoteo, minas gerais, vale do aço, industria, mercado, empresas, grupo, investimento"
+    />
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="site_lage" />
+    <link rel="apple-touch-icon" href="icons/favicon.ico" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="icons/favicon.ico" />
+
+    <title>Lage Imóveis</title>
+    <link rel="manifest" href="manifest.json" />
+
+    <style>
+      .pulse {
+        width: 200px;
+        animation: pulse 0.7s infinite;
+        margin: 0 auto;
+        display: table;
+        margin-top: 50px;
+        animation-direction: alternate;
+        -webkit-animation-name: pulse;
+        animation-name: pulse;
+      }
+
+      @-webkit-keyframes pulse {
+        0% {
+          -webkit-transform: scale(1);
+          -webkit-filter: brightness(80%);
+        }
+        100% {
+          -webkit-transform: scale(1.1);
+          -webkit-filter: brightness(100%);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          filter: brightness(80%);
+        }
+        100% {
+          transform: scale(1.1);
+          filter: brightness(100%);
+        }
+      }
+    </style>
+  </head>
+  <body id="app-container">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyApkXPiK5eBEb1xizWvlx3WGMP5KtIFmHY",
+        authDomain: "lage-imoveis.firebaseapp.com",
+        databaseURL: "https://lage-imoveis.firebaseio.com",
+        projectId: "lage-imoveis",
+        storageBucket: "lage-imoveis.appspot.com",
+        messagingSenderId: "704507798133",
+        appId: "1:704507798133:web:eb0d3a71b88dc90f368e3c",
+        measurementId: "G-PHC9ZT1ZGP",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+    <div>
+      <img src="assets/assets/logo/Lage.png" class="pulse" />
+    </div>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("flutter_service_worker.js");
+        });
+      }
+    </script>
+    <script src="main.dart.js" type="application/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0M4F7gIEAoJpx961V_kz0Dk68oTHBOeU"></script>
+  </body>
+</html>

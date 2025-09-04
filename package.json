@@ -1,0 +1,19 @@
+{
+  "name": "bonfim-imobiliaria",
+  "version": "1.0.0",
+  "description": "Site da Bonfim Imobiliária - Terrenos em Porto Velho",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "build": "echo 'Static site - no build needed'",
+    "start": "python -m http.server 8000"
+  },
+  "keywords": [
+    "imobiliaria",
+    "terrenos",
+    "porto-velho",
+    "rondonia"
+  ],
+  "author": "Bonfim Imobiliária",
+  "license": "MIT"
+}
