@@ -206,7 +206,13 @@
                 <!-- Lote 1C - Prudente de Moraes -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                     <div class="h-48 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center relative">
-                        <img src="1C%20-%20Prudente%20de%20Moraes/fotolote1.JPG" alt="Lote 1C - Prudente de Moraes" class="w-full h-full object-cover">
+                        <img src="1C%20-%20Prudente%20de%20Moraes/fotolote1.JPG" alt="Lote 1C - Prudente de Moraes" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center" style="display: none;">
+                            <div class="text-center text-gray-600">
+                                <i data-lucide="image" class="h-12 w-12 mx-auto mb-2"></i>
+                                <p class="text-sm">Imagem do Lote 1C</p>
+                            </div>
+                        </div>
                         <div class="absolute top-2 right-2 bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-bold">
                             DISPONÍVEL
                         </div>
@@ -248,7 +254,13 @@
                 <!-- Lote 2C - Prudente de Moraes -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                     <div class="h-48 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center relative">
-                        <img src="2C%20-%20Prudente%20de%20Moraes/1.JPG" alt="Lote 2C - Prudente de Moraes" class="w-full h-full object-cover">
+                        <img src="2C%20-%20Prudente%20de%20Moraes/1.JPG" alt="Lote 2C - Prudente de Moraes" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center" style="display: none;">
+                            <div class="text-center text-gray-600">
+                                <i data-lucide="image" class="h-12 w-12 mx-auto mb-2"></i>
+                                <p class="text-sm">Imagem do Lote 2C</p>
+                            </div>
+                        </div>
                         <div class="absolute top-2 right-2 bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-bold">
                             DISPONÍVEL
                         </div>
@@ -551,18 +563,40 @@
 
         // Populate bairros dropdown with data from data.js
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, checking for data...');
+            console.log('portoVelhoData available:', !!window.portoVelhoData);
+            
             const bairroSelect = document.querySelector('select[name="bairro"]');
-            if (bairroSelect && window.portoVelhoData) {
+            if (bairroSelect) {
+                console.log('Bairro select found');
+                
                 // Clear existing options except the first one
                 bairroSelect.innerHTML = '<option value="">Bairro</option>';
                 
-                // Add bairros from data.js
-                window.portoVelhoData.bairros.forEach(bairro => {
+                if (window.portoVelhoData && window.portoVelhoData.regioes) {
+                    console.log('Adding bairros to dropdown...');
+                    
+                    // Add all bairros from all regions
+                    Object.values(window.portoVelhoData.regioes).forEach(regiao => {
+                        regiao.bairros.forEach(bairro => {
+                            const option = document.createElement('option');
+                            option.value = bairro.toLowerCase().replace(/\s+/g, '-');
+                            option.textContent = bairro;
+                            bairroSelect.appendChild(option);
+                        });
+                    });
+                    
+                    console.log('Bairros added successfully');
+                } else {
+                    console.error('portoVelhoData not available');
+                    // Fallback: add Centro manually
                     const option = document.createElement('option');
-                    option.value = bairro.toLowerCase().replace(/\s+/g, '-');
-                    option.textContent = bairro;
+                    option.value = 'centro';
+                    option.textContent = 'Centro';
                     bairroSelect.appendChild(option);
-                });
+                }
+            } else {
+                console.error('Bairro select not found');
             }
         });
     </script>
