@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonfim Imobiliária - Porto Velho, RO</title>
+    <meta name="description" content="Bonfim Imobiliária especializada em lotes e terrenos em Porto Velho, Rondônia. Encontre o terreno ideal para seu investimento.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Dados dos bairros e propriedades -->
+    <script src="data.js"></script>
+    
+    <style>
+        :root {
+            --black: #403F3F;
+            --deep-yellow: #BF9A2C;
+            --deep-yellow-accent: #F2AE2E;
+            --yellow: #F2C12E;
+            --yellow-accent: #FECF27;
+            --yellow-logo: #FECF27;
+            --white-accent: #F8F8F8;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .btn-primary {
+            background: var(--yellow-accent);
+            color: var(--black);
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            background: #fbbf24;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: var(--black);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: #1f2937;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-black shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3">
+                    <img src="BIMTECH.jpg" alt="Bonfim Imobiliária" class="h-10 w-10 rounded-lg">
+                    <div>
+                        <h1 class="text-xl font-bold text-yellow-400">Bonfim Imobiliária</h1>
+                        <p class="text-xs text-gray-400">Porto Velho, RO</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Início</a>
+                    <a href="#propriedades" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Propriedades</a>
+                    <a href="#buscar" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Buscar</a>
+                    <a href="#sobre" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Sobre</a>
+                    <a href="#contato" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contato</a>
+                </div>
+
+                <!-- Contact Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://wa.me/69992561830" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-yellow-400 text-black font-medium rounded-lg hover:bg-yellow-300 transition-colors">
+                        <i data-lucide="phone" class="h-4 w-4"></i>
+                        <span>Contato</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-yellow-400 focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900 rounded-lg mt-2">
+                    <a href="#inicio" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Início</a>
+                    <a href="#propriedades" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Propriedades</a>
+                    <a href="#buscar" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Buscar</a>
+                    <a href="#sobre" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Sobre</a>
+                    <a href="#contato" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Contato</a>
+                    <div class="pt-4 border-t border-gray-700">
+                        <a href="https://wa.me/69992561830" target="_blank" class="flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium text-yellow-400 hover:bg-gray-800">
+                            <i data-lucide="phone" class="h-5 w-5"></i>
+                            <span>Contato WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen hero-bg">
+        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+        <div class="relative z-10 h-full flex items-center justify-center">
+            <div class="text-center text-white max-w-4xl mx-auto px-4">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-yellow-400">
+                    Faça sua busca online
+                </h1>
+                <p class="text-xl md:text-2xl mb-12 text-gray-200">
+                    Encontre o terreno ideal em Porto Velho, Rondônia
+                </p>
+                
+                <!-- Search Form -->
+                <div class="search-form rounded-2xl p-8 max-w-4xl mx-auto">
+                    <form class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div>
+                            <div class="w-full p-4 rounded-lg bg-white bg-opacity-90 text-black border-0 flex items-center">
+                                <i data-lucide="home" class="h-5 w-5 mr-2 text-yellow-400"></i>
+                                <span class="font-medium">Terreno</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="w-full p-4 rounded-lg bg-white bg-opacity-90 text-black border-0 flex items-center">
+                                <i data-lucide="map-pin" class="h-5 w-5 mr-2 text-yellow-400"></i>
+                                <span class="font-medium">Porto Velho, RO</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <select name="bairro" class="w-full p-4 rounded-lg bg-white bg-opacity-90 text-black border-0 focus:ring-2 focus:ring-yellow-400">
+                                <option value="">Bairro</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="w-full p-4 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-300 transition-colors flex items-center justify-center">
+                                <i data-lucide="search" class="h-5 w-5 mr-2"></i>
+                                Ver Terrenos
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section id="propriedades" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-black mb-4">
+                    Nossos Terrenos
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Terrenos disponíveis no Centro de Porto Velho, Rondônia
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Lote 1C - Prudente de Moraes -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center relative">
+                        <img src="1C%20-%20Prudente%20de%20Moraes/fotolote1.JPG" alt="Lote 1C - Prudente de Moraes" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center" style="display: none;">
+                            <div class="text-center text-gray-600">
+                                <i data-lucide="image" class="h-12 w-12 mx-auto mb-2"></i>
+                                <p class="text-sm">Imagem do Lote 1C</p>
+                            </div>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-bold">
+                            DISPONÍVEL
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="px-3 py-1 bg-yellow-400 text-black text-sm font-medium rounded-full">
+                                Terreno
+                            </span>
+                            <span class="text-2xl font-bold text-black">
+                                Consulte
+                            </span>
+                        </div>
+                        
+                        <h3 class="text-lg font-semibold text-black mb-2">
+                            Lote 1C - Rua Prudente de Moraes
+                        </h3>
+                        
+                        <div class="flex items-center text-gray-600 mb-3">
+                            <i data-lucide="map-pin" class="h-4 w-4 mr-1"></i>
+                            <span class="text-sm">Centro - Porto Velho, RO</span>
+                        </div>
+                        
+                        <p class="text-gray-600 text-sm mb-4">
+                            Terreno localizado na Rua Prudente de Moraes, bairro Centro. Excelente localização com fácil acesso e infraestrutura completa.
+                        </p>
+                        
+                        <div class="flex space-x-2">
+                            <a href="lote1c.html" class="flex-1 px-4 py-2 bg-black text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors text-center">
+                                Ver Fotos
+                            </a>
+                            <a href="https://wa.me/69992561830?text=Olá! Gostaria de saber mais sobre o Lote 1C na Rua Prudente de Moraes" target="_blank" class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lote 2C - Prudente de Moraes -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center relative">
+                        <img src="2C%20-%20Prudente%20de%20Moraes/1.JPG" alt="Lote 2C - Prudente de Moraes" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center" style="display: none;">
+                            <div class="text-center text-gray-600">
+                                <i data-lucide="image" class="h-12 w-12 mx-auto mb-2"></i>
+                                <p class="text-sm">Imagem do Lote 2C</p>
+                            </div>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-bold">
+                            DISPONÍVEL
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="px-3 py-1 bg-yellow-400 text-black text-sm font-medium rounded-full">
+                                Terreno
+                            </span>
+                            <span class="text-2xl font-bold text-black">
+                                Consulte
+                            </span>
+                        </div>
+                        
+                        <h3 class="text-lg font-semibold text-black mb-2">
+                            Lote 2C - Rua Prudente de Moraes
+                        </h3>
+                        
+                        <div class="flex items-center text-gray-600 mb-3">
+                            <i data-lucide="map-pin" class="h-4 w-4 mr-1"></i>
+                            <span class="text-sm">Centro - Porto Velho, RO</span>
+                        </div>
+                        
+                        <p class="text-gray-600 text-sm mb-4">
+                            Terreno localizado na Rua Prudente de Moraes, bairro Centro. Ótima oportunidade de investimento em localização estratégica.
+                        </p>
+                        
+                        <div class="flex space-x-2">
+                            <a href="lote2c.html" class="flex-1 px-4 py-2 bg-black text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors text-center">
+                                Ver Fotos
+                            </a>
+                            <a href="https://wa.me/69992561830?text=Olá! Gostaria de saber mais sobre o Lote 2C na Rua Prudente de Moraes" target="_blank" class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotional Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="promo-gradient rounded-2xl p-12 text-center text-white">
+                <h2 class="text-4xl font-bold mb-6">
+                    Realize o Sonho da Casa Própria
+                </h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Encontre o terreno perfeito para construir sua casa dos sonhos em Porto Velho
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/69992561830" target="_blank" class="btn-primary">
+                        <i data-lucide="message-circle" class="h-5 w-5 mr-2 inline"></i>
+                        Fale Conosco
+                    </a>
+                    <a href="#sobre" class="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-black font-medium rounded-lg transition-colors">
+                        Conheça Nossa História
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-black mb-4">
+                    Por que Escolher a Bonfim Imobiliária?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Especialistas em lotes e terrenos com anos de experiência no mercado
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-yellow-400 mb-4 flex justify-center">
+                        <i data-lucide="shield" class="h-12 w-12 icon-hover"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-black mb-4">
+                        Documentação Regularizada
+                    </h3>
+                    <p class="text-gray-600">
+                        Todos os nossos imóveis possuem documentação em dia e regularizada
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-yellow-400 mb-4 flex justify-center">
+                        <i data-lucide="map-pin" class="h-12 w-12 icon-hover"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-black mb-4">
+                        Localizações Estratégicas
+                    </h3>
+                    <p class="text-gray-600">
+                        Terrenos em bairros com infraestrutura e potencial de valorização
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-yellow-400 mb-4 flex justify-center">
+                        <i data-lucide="users" class="h-12 w-12 icon-hover"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-black mb-4">
+                        Atendimento Especializado
+                    </h3>
+                    <p class="text-gray-600">
+                        Equipe experiente pronta para ajudar você a encontrar o imóvel ideal
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-yellow-400 mb-4 flex justify-center">
+                        <i data-lucide="award" class="h-12 w-12 icon-hover"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-black mb-4">
+                        Transparência Total
+                    </h3>
+                    <p class="text-gray-600">
+                        Informações claras e precisas sobre cada propriedade
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-black mb-6">
+                        Sobre a Bonfim Imobiliária
+                    </h2>
+                    <div class="space-y-4 text-gray-600">
+                        <p>
+                            A Bonfim Imobiliária nasceu da paixão por Porto Velho e do desejo de 
+                            oferecer um serviço diferenciado no mercado imobiliário local. 
+                            Especializamo-nos em lotes e terrenos, entendendo que cada metro 
+                            quadrado representa um sonho, um projeto ou um investimento.
+                        </p>
+                        <p>
+                            Com anos de experiência no mercado de Rondônia, nossa equipe 
+                            conhece profundamente cada bairro, suas características e potencial 
+                            de desenvolvimento. Isso nos permite oferecer assessoria especializada 
+                            e encontrar as melhores oportunidades para nossos clientes.
+                        </p>
+                        <p>
+                            Acreditamos que Porto Velho tem um potencial imenso para crescimento, 
+                            e queremos fazer parte dessa história, conectando pessoas aos lugares 
+                            onde construirão seu futuro.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="BIMTECH.jpg" alt="Bonfim Imobiliária" class="w-full h-96 object-cover rounded-2xl shadow-2xl">
+                    <div class="absolute -bottom-6 -left-6 bg-black text-white p-4 rounded-lg shadow-lg">
+                        <p class="font-semibold">Porto Velho, RO</p>
+                        <p class="text-sm text-gray-300">Desde 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-16 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">
+                    Entre em Contato
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Nossa equipe está pronta para ajudá-lo a encontrar o terreno ideal
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-yellow-400 mb-4 flex justify-center">
+                        <i data-lucide="map-pin" class="h-8 w-8"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Endereço</h3>
+                    <p class="text-gray-300">Rua México, 1604</p>
+                    <p class="text-gray-300">Porto Velho, Rondônia</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-yellow-400 mb-4 flex justify-center">
+                        <i data-lucide="phone" class="h-8 w-8"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Telefone</h3>
+                    <p class="text-gray-300">(69) 99256-1830</p>
+                    <p class="text-gray-400 text-sm">WhatsApp disponível</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-yellow-400 mb-4 flex justify-center">
+                        <i data-lucide="mail" class="h-8 w-8"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Email</h3>
+                    <p class="text-gray-300">engrodrigofblopes@gmail.com</p>
+                    <p class="text-gray-400 text-sm">Resposta em até 24h</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-yellow-400 mb-4 flex justify-center">
+                        <i data-lucide="clock" class="h-8 w-8"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Horário</h3>
+                    <p class="text-gray-300">Seg-Sex: 8h às 18h</p>
+                    <p class="text-gray-300">Sáb: 8h às 12h</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://wa.me/69992561830" target="_blank" class="btn-primary text-lg">
+                    <i data-lucide="message-circle" class="h-5 w-5 mr-2 inline"></i>
+                    Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <img src="BIMTECH.jpg" alt="Bonfim Imobiliária" class="h-8 w-8 rounded">
+                    <div>
+                        <p class="font-semibold text-yellow-400">Bonfim Imobiliária</p>
+                        <p class="text-sm text-gray-400">Porto Velho, RO</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-sm">
+                    © 2024 Bonfim Imobiliária. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                if (href && href !== '#') {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Search form functionality
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const bairroSelecionado = document.querySelector('select[name="bairro"]').value;
+            
+            if (bairroSelecionado) {
+                // Scroll para a seção de propriedades
+                document.getElementById('propriedades').scrollIntoView({ 
+                    behavior: 'smooth' 
+                });
+                
+                // Mostrar mensagem baseada no bairro selecionado
+                setTimeout(() => {
+                    if (bairroSelecionado === 'centro') {
+                        alert('Encontramos 2 terrenos disponíveis no Centro! Confira abaixo.');
+                    } else {
+                        alert('Atualmente temos terrenos disponíveis no Centro. Entre em contato para mais informações sobre outros bairros!');
+                    }
+                }, 500);
+            } else {
+                // Scroll para a seção de propriedades mesmo sem bairro selecionado
+                document.getElementById('propriedades').scrollIntoView({ 
+                    behavior: 'smooth' 
+                });
+                
+                setTimeout(() => {
+                    alert('Confira nossos terrenos disponíveis! Atualmente temos 2 terrenos no Centro de Porto Velho.');
+                }, 500);
+            }
+        });
+
+        // Populate bairros dropdown with data from data.js
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, checking for data...');
+            console.log('portoVelhoData available:', !!window.portoVelhoData);
+            
+            const bairroSelect = document.querySelector('select[name="bairro"]');
+            if (bairroSelect) {
+                console.log('Bairro select found');
+                
+                // Clear existing options except the first one
+                bairroSelect.innerHTML = '<option value="">Bairro</option>';
+                
+                if (window.portoVelhoData && window.portoVelhoData.regioes) {
+                    console.log('Adding bairros to dropdown...');
+                    
+                    // Add all bairros from all regions
+                    Object.values(window.portoVelhoData.regioes).forEach(regiao => {
+                        regiao.bairros.forEach(bairro => {
+                            const option = document.createElement('option');
+                            option.value = bairro.toLowerCase().replace(/\s+/g, '-');
+                            option.textContent = bairro;
+                            bairroSelect.appendChild(option);
+                        });
+                    });
+                    
+                    console.log('Bairros added successfully');
+                } else {
+                    console.error('portoVelhoData not available');
+                    // Fallback: add Centro manually
+                    const option = document.createElement('option');
+                    option.value = 'centro';
+                    option.textContent = 'Centro';
+                    bairroSelect.appendChild(option);
+                }
+            } else {
+                console.error('Bairro select not found');
+            }
+        });
+    </script>
+</body>
+</html>
