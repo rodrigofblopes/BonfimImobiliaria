@@ -1,0 +1,3 @@
+Deploy forçado em: 2025-09-04 00:45:00
+Status: Deploy manual para Vercel
+Commit: 5bf403e
