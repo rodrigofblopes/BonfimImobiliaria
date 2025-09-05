@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora CUB Sinduscon - Bonfim Imobiliária</title>
+    <meta name="description" content="Calcule o custo da sua obra baseado nos valores oficiais do CUB (Custo Unitário Básico) do Sinduscon-RO para Porto Velho">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        :root {
+            --black: #403F3F;
+            --deep-yellow: #BF9A2C;
+            --deep-yellow-accent: #F2AE2E;
+            --yellow: #F2C12E;
+            --yellow-accent: #FECF27;
+            --yellow-logo: #FECF27;
+            --white-accent: #F8F8F8;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .btn-primary {
+            background: var(--yellow-accent);
+            color: var(--black);
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            background: #fbbf24;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-black shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-3">
+                    <img src="BIMTECH.jpg" alt="Bonfim Imobiliária" class="h-10 w-10 rounded-lg">
+                    <div>
+                        <h1 class="text-xl font-bold text-yellow-400">Bonfim Imobiliária</h1>
+                        <p class="text-xs text-gray-400">Porto Velho, RO</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#inicio" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Início</a>
+                    <a href="index.html#propriedades" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Propriedades</a>
+                    <a href="index.html#investimentos" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Incorporação/Investimento</a>
+                    <a href="sinduscon.html" class="text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Preço por m² Sinduscon</a>
+                    <a href="index.html#sobre" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Sobre</a>
+                    <a href="index.html#contato" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contato</a>
+                </div>
+
+                <!-- Contact Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://wa.me/69992561830" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-yellow-400 text-black font-medium rounded-lg hover:bg-yellow-300 transition-colors">
+                        <img src="wpp.jpg" alt="WhatsApp" class="h-4 w-4">
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-yellow-400 focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900 rounded-lg mt-2">
+                    <a href="index.html#inicio" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Início</a>
+                    <a href="index.html#propriedades" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Propriedades</a>
+                    <a href="index.html#investimentos" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Incorporação/Investimento</a>
+                    <a href="sinduscon.html" class="text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Preço por m² Sinduscon</a>
+                    <a href="index.html#sobre" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Sobre</a>
+                    <a href="index.html#contato" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Contato</a>
+                    <div class="pt-4 border-t border-gray-700">
+                        <a href="https://wa.me/69992561830" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-yellow-400 text-black font-medium rounded-lg hover:bg-yellow-300 transition-colors">
+                            <img src="wpp.jpg" alt="WhatsApp" class="h-4 w-4">
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="min-h-screen py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
+                        <i data-lucide="calculator" class="text-black text-xl"></i>
+                    </div>
+                    <h1 class="text-4xl font-bold text-black">
+                        Calculadora CUB Sinduscon
+                    </h1>
+                </div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Calcule o custo da sua obra baseado nos valores oficiais do CUB (Custo Unitário Básico) 
+                    do Sinduscon-RO para Porto Velho
+                </p>
+            </div>
+
+            <!-- Card de Informações -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="info" class="text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-black">
+                            O que é o CUB?
+                        </h2>
+                        <p class="text-gray-600">
+                            Custo Unitário Básico - Referência oficial para construção civil
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-semibold text-lg mb-3 text-gray-800">📋 Definição:</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            O CUB é calculado mensalmente pelos Sinduscons e representa o custo 
+                            por metro quadrado de construção, incluindo materiais e mão de obra.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-semibold text-lg mb-3 text-gray-800">⚖️ Base Legal:</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Estabelecido pela Lei 4.591/64 e NBR 12.721, é usado como referência 
+                            para financiamentos, contratos e avaliações imobiliárias.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seletor de Tipo -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+                <h2 class="text-2xl font-bold text-black mb-6 text-center">
+                    Selecione o Tipo de Construção
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-4 mb-8">
+                    <button id="btn-residencial" class="p-6 rounded-2xl border-2 border-yellow-400 bg-yellow-50 shadow-lg transition-all duration-300">
+                        <i data-lucide="home" class="text-3xl mb-3 mx-auto text-yellow-400"></i>
+                        <h3 class="font-bold text-lg mb-2">Residencial</h3>
+                        <p class="text-gray-600 text-sm">
+                            Casas, apartamentos e residências
+                        </p>
+                    </button>
+
+                    <button id="btn-comercial" class="p-6 rounded-2xl border-2 border-gray-200 hover:border-yellow-400 transition-all duration-300">
+                        <i data-lucide="building" class="text-3xl mb-3 mx-auto text-gray-400"></i>
+                        <h3 class="font-bold text-lg mb-2">Comercial</h3>
+                        <p class="text-gray-600 text-sm">
+                            Lojas, escritórios e galpões
+                        </p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Cards de Tipos com Calculadora -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+                <h2 class="text-2xl font-bold text-black mb-6 text-center" id="titulo-tipo">
+                    Valores CUB - Residencial
+                </h2>
+                
+                <div class="grid gap-6" id="cards-cub">
+                    <!-- Cards serão preenchidos via JavaScript -->
+                </div>
+                
+                <div class="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
+                    <p class="text-sm text-yellow-800">
+                        <strong>📅 Referência:</strong> Maio 2025 | 
+                        <strong> 📍 Região:</strong> Porto Velho-RO | 
+                        <strong> 🏛️ Fonte:</strong> Sinduscon-RO
+                    </p>
+                </div>
+            </div>
+
+            <!-- Links para Documentos -->
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-black mb-6 text-center">
+                    Documentos Oficiais
+                </h2>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="#" class="group p-6 border-2 border-gray-200 rounded-2xl hover:border-yellow-400 hover:shadow-lg transition-all duration-300">
+                        <i data-lucide="download" class="text-3xl text-blue-600 mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-bold text-lg mb-2">CUB Onerado</h3>
+                        <p class="text-gray-600 text-sm">
+                            Valores com impostos incluídos
+                        </p>
+                    </a>
+
+                    <a href="#" class="group p-6 border-2 border-gray-200 rounded-2xl hover:border-yellow-400 hover:shadow-lg transition-all duration-300">
+                        <i data-lucide="download" class="text-3xl text-green-600 mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-bold text-lg mb-2">CUB Desonerado</h3>
+                        <p class="text-gray-600 text-sm">
+                            Valores sem impostos
+                        </p>
+                    </a>
+
+                    <a href="#" class="group p-6 border-2 border-gray-200 rounded-2xl hover:border-yellow-400 hover:shadow-lg transition-all duration-300">
+                        <i data-lucide="download" class="text-3xl text-purple-600 mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-bold text-lg mb-2">Cartilha CUB</h3>
+                        <p class="text-gray-600 text-sm">
+                            Guia completo sobre CUB
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <img src="BIMTECH.jpg" alt="Bonfim Imobiliária" class="h-8 w-8 rounded">
+                    <div>
+                        <p class="font-semibold text-yellow-400">Bonfim Imobiliária</p>
+                        <p class="text-sm text-gray-400">Porto Velho, RO</p>
+                    </div>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400 text-sm mb-2">
+                        © 2024 Bonfim Imobiliária. Todos os direitos reservados.
+                    </p>
+                    <p class="text-gray-500 text-xs">
+                        Calculadora CUB baseada nos valores oficiais do Sinduscon-RO
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dados do CUB (baseados nos valores do ConectaPro)
+        const dadosCUB = {
+            residencial: {
+                r1: { valor: 1850.45, descricao: "Casa popular (1 pavimento)" },
+                r8: { valor: 2156.78, descricao: "Residência unifamiliar padrão" },
+                r16: { valor: 2489.32, descricao: "Residência multifamiliar" }
+            },
+            comercial: {
+                cs8: { valor: 2234.67, descricao: "Salas/Conjuntos comerciais" },
+                cs16: { valor: 2567.89, descricao: "Lojas e sobrelojas" },
+                galpao: { valor: 1678.23, descricao: "Galpões industriais" }
+            }
+        };
+
+        let tipoSelecionado = 'residencial';
+        let metragem = '';
+        let tipoConstrucao = '';
+
+        // Inicializar ícones
+        lucide.createIcons();
+
+        // Função para calcular custo
+        function calcularCusto(valorCUB, metragem) {
+            if (!metragem || parseFloat(metragem) <= 0) return null;
+            return valorCUB * parseFloat(metragem);
+        }
+
+        // Função para renderizar cards
+        function renderizarCards() {
+            const cardsContainer = document.getElementById('cards-cub');
+            const titulo = document.getElementById('titulo-tipo');
+            
+            titulo.textContent = `Valores CUB - ${tipoSelecionado === 'residencial' ? 'Residencial' : 'Comercial'}`;
+            
+            cardsContainer.innerHTML = '';
+            
+            Object.entries(dadosCUB[tipoSelecionado]).forEach(([tipo, dados]) => {
+                const card = document.createElement('div');
+                card.className = 'rounded-2xl border-2 border-gray-200 p-6 bg-gray-50';
+                
+                const resultado = tipoConstrucao === tipo && metragem && parseFloat(metragem) > 0 ? 
+                    calcularCusto(dados.valor, metragem) : null;
+                const materiais = resultado ? resultado * 0.55 : 0;
+                const maoDeObra = resultado ? resultado * 0.4 : 0;
+                
+                card.innerHTML = `
+                    <div class="flex flex-col md:flex-row md:items-center gap-4">
+                        <div class="flex-1">
+                            <div class="flex flex-col gap-2 mb-4">
+                                <span class="font-bold text-yellow-400 text-lg">${tipo.toUpperCase()}</span>
+                                <span class="font-semibold text-gray-800">${dados.descricao}</span>
+                                <span class="text-green-700 font-bold text-xl">
+                                    R$ ${dados.valor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}/m²
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-1">
+                            <div class="flex flex-col gap-2">
+                                <label class="text-sm font-medium text-gray-700">Metragem (m²):</label>
+                                <input
+                                    type="number"
+                                    value="${tipoConstrucao === tipo ? metragem : ''}"
+                                    placeholder="Ex: 120"
+                                    class="w-full p-3 border-2 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                                    onchange="atualizarCalculo('${tipo}', this.value)"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    
+                    ${tipoConstrucao === tipo && metragem && parseFloat(metragem) > 0 ? `
+                        <div class="mt-4 bg-white rounded-lg p-4 border border-gray-200">
+                            <div class="font-bold text-green-600 text-xl mb-2">
+                                Total: R$ ${resultado.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm">
+                                <div>
+                                    <span class="font-semibold">Materiais:</span> R$ ${materiais.toLocaleString('pt-BR', { minimumFractionDigits: 2 })} (55%)
+                                </div>
+                                <div>
+                                    <span class="font-semibold">Mão de obra:</span> R$ ${maoDeObra.toLocaleString('pt-BR', { minimumFractionDigits: 2 })} (40%)
+                                </div>
+                            </div>
+                        </div>
+                    ` : ''}
+                `;
+                
+                cardsContainer.appendChild(card);
+            });
+        }
+
+        // Função para atualizar cálculo
+        function atualizarCalculo(tipo, valor) {
+            metragem = valor;
+            tipoConstrucao = tipo;
+            renderizarCards();
+        }
+
+        // Event listeners para botões de tipo
+        document.getElementById('btn-residencial').addEventListener('click', () => {
+            tipoSelecionado = 'residencial';
+            metragem = '';
+            tipoConstrucao = '';
+            atualizarBotoes();
+            renderizarCards();
+        });
+
+        document.getElementById('btn-comercial').addEventListener('click', () => {
+            tipoSelecionado = 'comercial';
+            metragem = '';
+            tipoConstrucao = '';
+            atualizarBotoes();
+            renderizarCards();
+        });
+
+        // Função para atualizar estado dos botões
+        function atualizarBotoes() {
+            const btnResidencial = document.getElementById('btn-residencial');
+            const btnComercial = document.getElementById('btn-comercial');
+            
+            if (tipoSelecionado === 'residencial') {
+                btnResidencial.className = 'p-6 rounded-2xl border-2 border-yellow-400 bg-yellow-50 shadow-lg transition-all duration-300';
+                btnComercial.className = 'p-6 rounded-2xl border-2 border-gray-200 hover:border-yellow-400 transition-all duration-300';
+            } else {
+                btnComercial.className = 'p-6 rounded-2xl border-2 border-yellow-400 bg-yellow-50 shadow-lg transition-all duration-300';
+                btnResidencial.className = 'p-6 rounded-2xl border-2 border-gray-200 hover:border-yellow-400 transition-all duration-300';
+            }
+        }
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Inicializar
+        renderizarCards();
+    </script>
+</body>
+</html>

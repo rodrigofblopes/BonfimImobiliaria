@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Bonfim Imobiliária</title>
+    <meta name="description" content="Blog da Bonfim Imobiliária com artigos sobre mercado imobiliário, construção civil e investimentos em Porto Velho, RO">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        :root {
+            --black: #403F3F;
+            --deep-yellow: #BF9A2C;
+            --deep-yellow-accent: #F2AE2E;
+            --yellow: #F2C12E;
+            --yellow-accent: #FECF27;
+            --yellow-logo: #FECF27;
+            --white-accent: #F8F8F8;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .btn-primary {
+            background: var(--yellow-accent);
+            color: var(--black);
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            background: #fbbf24;
+            transform: translateY(-2px);
+        }
+        
+        .blog-card {
+            transition: all 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-black shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-3">
+                    <img src="BIMTECH.jpg" alt="Bonfim Imobiliária" class="h-10 w-10 rounded-lg">
+                    <div>
+                        <h1 class="text-xl font-bold text-yellow-400">Bonfim Imobiliária</h1>
+                        <p class="text-xs text-gray-400">Porto Velho, RO</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#inicio" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Início</a>
+                    <a href="index.html#propriedades" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Propriedades</a>
+                    <a href="index.html#investimentos" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Incorporação/Investimento</a>
+                    <a href="sinduscon.html" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Preço por m² Sinduscon</a>
+                    <a href="blog.html" class="text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Blog</a>
+                    <a href="index.html#sobre" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Sobre</a>
+                    <a href="index.html#contato" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contato</a>
+                </div>
+
+                <!-- Contact Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://wa.me/69992561830" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-yellow-400 text-black font-medium rounded-lg hover:bg-yellow-300 transition-colors">
+                        <img src="wpp.jpg" alt="WhatsApp" class="h-4 w-4">
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-yellow-400 focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900 rounded-lg mt-2">
+                    <a href="index.html#inicio" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Início</a>
+                    <a href="index.html#propriedades" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Propriedades</a>
+                    <a href="index.html#investimentos" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Incorporação/Investimento</a>
+                    <a href="sinduscon.html" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Preço por m² Sinduscon</a>
+                    <a href="blog.html" class="text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
+                    <a href="index.html#sobre" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Sobre</a>
+                    <a href="index.html#contato" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Contato</a>
+                    <div class="pt-4 border-t border-gray-700">
+                        <a href="https://wa.me/69992561830" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-yellow-400 text-black font-medium rounded-lg hover:bg-yellow-300 transition-colors">
+                            <img src="wpp.jpg" alt="WhatsApp" class="h-4 w-4">
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-black to-gray-800 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    Blog Bonfim Imobiliária
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
+                    Artigos sobre mercado imobiliário, construção civil e investimentos em Porto Velho
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Featured Article -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-black mb-8 text-center">📰 Artigo em Destaque</h2>
+                
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden blog-card">
+                    <div class="md:flex">
+                        <div class="md:w-1/2">
+                            <div class="h-64 md:h-full bg-gradient-to-br from-blue-600 to-purple-700 flex items-center justify-center">
+                                <div class="text-center text-white p-8">
+                                    <i data-lucide="calculator" class="h-20 w-20 mx-auto mb-4"></i>
+                                    <h3 class="text-2xl font-bold">CUB Sinduscon 2025</h3>
+                                    <p class="text-blue-200">Guia completo sobre custos de construção</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 p-8">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                                    Mercado
+                                </span>
+                                <span class="text-gray-500 text-sm">15 de Janeiro, 2025</span>
+                            </div>
+                            
+                            <h3 class="text-2xl font-bold text-black mb-4">
+                                CUB Sinduscon: Entenda os Custos da Construção em 2025
+                            </h3>
+                            
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Análise completa do CUB (Custo Unitário Básico) e como ele impacta os preços da construção civil em Porto Velho e região em 2025. Descubra como usar essas informações nos seus orçamentos.
+                            </p>
+                            
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center text-gray-500 text-sm">
+                                    <i data-lucide="clock" class="h-4 w-4 mr-1"></i>
+                                    <span>10 min de leitura</span>
+                                </div>
+                                <a href="#cub-sinduscon-2025" class="btn-primary">
+                                    Ler Artigo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- All Articles -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-black mb-8 text-center">📚 Todos os Artigos</h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Article 1: CUB Sinduscon -->
+                    <article class="bg-white rounded-xl shadow-lg overflow-hidden blog-card">
+                        <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i data-lucide="calculator" class="h-12 w-12 mx-auto mb-2"></i>
+                                <h4 class="font-bold">CUB Sinduscon</h4>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">
+                                    Mercado
+                                </span>
+                                <span class="text-gray-500 text-xs">Jan 2025</span>
+                            </div>
+                            
+                            <h3 class="text-lg font-bold text-black mb-3">
+                                CUB Sinduscon: Guia Completo 2025
+                            </h3>
+                            
+                            <p class="text-gray-600 text-sm mb-4">
+                                Tudo que você precisa saber sobre Custo Unitário Básico em Rondônia. Valores, tipos, aplicações e como usar as calculadoras.
+                            </p>
+                            
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-500 text-xs">15 min de leitura</span>
+                                <a href="#cub-guia-completo" class="text-yellow-500 hover:text-yellow-600 font-medium text-sm">
+                                    Ler mais →
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2: Investimentos Imobiliários -->
+                    <article class="bg-white rounded-xl shadow-lg overflow-hidden blog-card">
+                        <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i data-lucide="trending-up" class="h-12 w-12 mx-auto mb-2"></i>
+                                <h4 class="font-bold">Investimentos</h4>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
+                                    Investimento
+                                </span>
+                                <span class="text-gray-500 text-xs">Jan 2025</span>
+                            </div>
+                            
+                            <h3 class="text-lg font-bold text-black mb-3">
+                                Oportunidades de Investimento em Porto Velho
+                            </h3>
+                            
+                            <p class="text-gray-600 text-sm mb-4">
+                                Descubra as melhores oportunidades de investimento imobiliário em Porto Velho, RO. Análise de mercado e tendências.
+                            </p>
+                            
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-500 text-xs">8 min de leitura</span>
+                                <a href="#investimentos-porto-velho" class="text-yellow-500 hover:text-yellow-600 font-medium text-sm">
+                                    Ler mais →
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3: Financiamento -->
+                    <article class="bg-white rounded-xl shadow-lg overflow-hidden blog-card">
+                        <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i data-lucide="credit-card" class="h-12 w-12 mx-auto mb-2"></i>
+                                <h4 class="font-bold">Financiamento</h4>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">
+                                    Financiamento
+                                </span>
+                                <span class="text-gray-500 text-xs">Dez 2024</span>
+                            </div>
+                            
+                            <h3 class="text-lg font-bold text-black mb-3">
+                                Como Financiar seu Imóvel em 2025
+                            </h3>
+                            
+                            <p class="text-gray-600 text-sm mb-4">
+                                Guia completo sobre as melhores opções de financiamento imobiliário disponíveis em Porto Velho.
+                            </p>
+                            
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-500 text-xs">12 min de leitura</span>
+                                <a href="#financiamento-2025" class="text-yellow-500 hover:text-yellow-600 font-medium text-sm">
+                                    Ler mais →
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-2xl p-8 text-center">
+                <h3 class="text-2xl font-bold text-black mb-4">
+                    📧 Receba Nossas Atualizações
+                </h3>
+                <p class="text-black mb-6 max-w-2xl mx-auto">
+                    Fique por dentro das últimas novidades do mercado imobiliário em Porto Velho
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                    <input 
+                        type="email" 
+                        placeholder="Seu e-mail" 
+                        class="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-black"
+                    >
+                    <button class="px-6 py-3 bg-black text-white font-medium rounded-lg hover:bg-gray-800 transition-colors">
+                        Inscrever-se
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content (Hidden by default, shown when clicked) -->
+    <section id="cub-sinduscon-2025" class="py-16 bg-white hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <a href="blog.html" class="inline-flex items-center gap-2 text-yellow-500 hover:text-yellow-600 font-medium mb-4">
+                    <i data-lucide="arrow-left" class="h-4 w-4"></i>
+                    Voltar para o Blog
+                </a>
+            </div>
+
+            <article class="prose max-w-none">
+                <div class="mb-8 text-center">
+                    <div class="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-4">
+                        Mercado
+                    </div>
+                    <h1 class="text-4xl font-bold text-black mb-4">
+                        CUB Sinduscon: Entenda os Custos da Construção em 2025
+                    </h1>
+                    <div class="flex items-center justify-center gap-4 text-gray-500 text-sm">
+                        <span>📅 15 de Janeiro, 2025</span>
+                        <span>⏱️ 10 min de leitura</span>
+                    </div>
+                </div>
+
+                <div class="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
+                    <p class="text-green-800 font-medium">
+                        💡 <strong>Resumo:</strong> Análise completa do CUB (Custo Unitário Básico) 
+                        e como ele impacta os preços da construção civil em Porto Velho e região em 2025. 
+                        Descubra como usar essas informações nos seus orçamentos.
+                    </p>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- O que é CUB -->
+                    <div class="border-l-4 border-blue-500 pl-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                                <i data-lucide="info" class="text-blue-600"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold text-black">
+                                O que é o CUB?
+                            </h2>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-4">
+                            O CUB (Custo Unitário Básico) é um índice calculado mensalmente pelos 
+                            Sindicatos da Indústria da Construção Civil (Sinduscon) de cada estado. 
+                            Ele representa o custo por metro quadrado de construção.
+                        </p>
+                        
+                        <div class="bg-blue-50 rounded-lg p-4 mb-4">
+                            <h4 class="font-semibold mb-2">📋 Características do CUB:</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li>• Estabelecido pela Lei 4.591/64 e NBR 12.721</li>
+                                <li>• Atualizado mensalmente</li>
+                                <li>• Inclui materiais e mão de obra</li>
+                                <li>• Base para financiamentos e contratos</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Valores 2025 -->
+                    <div class="border-l-4 border-green-500 pl-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                                <i data-lucide="trending-up" class="text-green-600"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold text-black">
+                                Valores CUB 2025 - Porto Velho/RO
+                            </h2>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-4">
+                            Confira os valores atualizados do CUB para diferentes tipos de construção 
+                            em Porto Velho, referência janeiro de 2025:
+                        </p>
+                        
+                        <div class="grid md:grid-cols-2 gap-4 mb-4">
+                            <div class="bg-blue-50 rounded-lg p-4">
+                                <h4 class="font-semibold mb-2 text-blue-800">🏠 Residencial</h4>
+                                <ul class="space-y-1 text-gray-700">
+                                    <li>• R1 (Popular): <strong>R$ 1.850,45/m²</strong></li>
+                                    <li>• R8 (Padrão): <strong>R$ 2.156,78/m²</strong></li>
+                                    <li>• R16 (Alto): <strong>R$ 2.489,32/m²</strong></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-green-50 rounded-lg p-4">
+                                <h4 class="font-semibold mb-2 text-green-800">🏢 Comercial</h4>
+                                <ul class="space-y-1 text-gray-700">
+                                    <li>• CS8 (Salas): <strong>R$ 2.234,67/m²</strong></li>
+                                    <li>• CS16 (Lojas): <strong>R$ 2.567,89/m²</strong></li>
+                                    <li>• Galpões: <strong>R$ 1.678,23/m²</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Como usar -->
+                    <div class="border-l-4 border-purple-500 pl-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                                <i data-lucide="calculator" class="text-purple-600"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold text-black">
+                                Como Usar o CUB nos Seus Orçamentos
+                            </h2>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-4">
+                            O CUB é uma ferramenta poderosa para profissionais da construção. 
+                            Veja como aplicá-lo na prática:
+                        </p>
+                        
+                        <div class="bg-purple-50 rounded-lg p-4 mb-4">
+                            <h4 class="font-semibold mb-2">💼 Aplicações práticas:</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li>• <strong>Orçamentos rápidos:</strong> Multiplique a área pelo CUB correspondente</li>
+                                <li>• <strong>Comparação de preços:</strong> Verifique se seu orçamento está na média</li>
+                                <li>• <strong>Negociação:</strong> Use como base para justificar preços</li>
+                                <li>• <strong>Planejamento:</strong> Estime custos de projetos futuros</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                            <h4 class="font-semibold mb-2 text-yellow-800">⚠️ Importante:</h4>
+                            <p class="text-yellow-700">
+                                O CUB é uma referência base. Seu orçamento pode variar +/- 20% dependendo 
+                                de fatores como: localização, acabamentos especiais, complexidade da obra, 
+                                e condições do terreno.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Exemplo prático -->
+                    <div class="bg-gradient-to-r from-blue-50 to-green-50 rounded-xl p-6">
+                        <h3 class="text-xl font-bold mb-4 text-center">💡 Exemplo Prático</h3>
+                        <div class="bg-white rounded-lg p-4 shadow-sm">
+                            <p class="font-semibold mb-2">Situação: Casa de 120m² padrão médio</p>
+                            <div class="space-y-2 text-gray-700">
+                                <p>• Tipo: R8 (Residencial padrão)</p>
+                                <p>• CUB: R$ 2.156,78/m²</p>
+                                <p>• Cálculo: 120m² × R$ 2.156,78</p>
+                                <p class="text-lg font-bold text-green-600">• Custo estimado: R$ 258.813,60</p>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-3">
+                                *Valor base. Pode variar conforme acabamentos e localização.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CTA para Calculadora -->
+            <div class="bg-gray-50 rounded-2xl p-8 text-center mt-12">
+                <h3 class="text-2xl font-bold text-black mb-4">
+                    🧮 Quer Calcular o CUB da Sua Obra?
+                </h3>
+                <p class="text-gray-600 mb-6">
+                    Use nossa calculadora gratuita com valores sempre atualizados do Sinduscon-RO
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="sinduscon.html" class="btn-primary">
+                        Acessar Calculadora CUB
+                    </a>
+                    <a href="blog.html" class="px-8 py-4 border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black font-medium rounded-lg transition-colors">
+                        Ver Mais Artigos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <img src="BIMTECH.jpg" alt="Bonfim Imobiliária" class="h-8 w-8 rounded">
+                    <div>
+                        <p class="font-semibold text-yellow-400">Bonfim Imobiliária</p>
+                        <p class="text-sm text-gray-400">Porto Velho, RO</p>
+                    </div>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400 text-sm mb-2">
+                        © 2024 Bonfim Imobiliária. Todos os direitos reservados.
+                    </p>
+                    <p class="text-gray-500 text-xs">
+                        Blog com artigos sobre mercado imobiliário e construção civil
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializar ícones
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Show article content when clicked
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    // Hide all article sections
+                    document.querySelectorAll('section[id^="cub-"], section[id^="investimentos-"], section[id^="financiamento-"]').forEach(section => {
+                        section.classList.add('hidden');
+                    });
+                    
+                    // Show target section
+                    targetElement.classList.remove('hidden');
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
