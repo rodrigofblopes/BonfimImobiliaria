@@ -88,14 +88,14 @@
 <body class="bg-white">
     <!-- Navigation -->
     <nav class="bg-black shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
+        <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+            <div class="flex justify-between items-center h-14 sm:h-16">
                 <!-- Logo -->
-                <a href="#" class="flex items-center space-x-3">
-                    <img src="BIMTECH.jpg" alt="Bonfim Imobiliária" class="h-10 w-10 rounded-lg">
+                <a href="index.html" class="flex items-center space-x-2 sm:space-x-3">
+                    <img src="BIMTECH.jpg" alt="Bonfim Imobiliária" class="h-8 w-8 sm:h-10 sm:w-10 rounded-lg">
                     <div>
-                        <h1 class="text-xl font-bold text-yellow-400">Bonfim Imobiliária</h1>
-                        <p class="text-xs text-gray-400">Porto Velho, RO</p>
+                        <h1 class="text-sm sm:text-xl font-bold text-yellow-400 leading-tight">Bonfim Imobiliária</h1>
+                        <p class="text-xs text-gray-400 hidden sm:block">Porto Velho, RO</p>
                     </div>
                 </a>
 
@@ -104,7 +104,6 @@
                     <a href="#inicio" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Início</a>
                     <a href="#propriedades" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Propriedades</a>
                     <a href="#investimentos" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Incorporação/Investimento</a>
-                    <a href="sinduscon.html" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Preço por m² Sinduscon</a>
                     <a href="rs-m2-sinduscon.html" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">R$/M² Sinduscon</a>
                     <a href="blog.html" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Blog</a>
                     <a href="#sobre" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Sobre</a>
@@ -113,15 +112,17 @@
 
                 <!-- Contact Button -->
                 <div class="hidden md:flex items-center space-x-4">
-                    <a href="https://wa.me/69992561830" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-yellow-400 text-black font-medium rounded-lg hover:bg-yellow-300 transition-colors">
-                        <img src="wpp.jpg" alt="WhatsApp" class="h-4 w-4">
+                    <a href="https://wa.me/69992561830" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                        </svg>
                         <span>WhatsApp</span>
                     </a>
                 </div>
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-white hover:text-yellow-400 focus:outline-none">
+                    <button id="mobile-menu-button" class="text-white hover:text-yellow-400 focus:outline-none p-2 rounded-lg hover:bg-gray-800 transition-colors">
                         <i data-lucide="menu" class="h-6 w-6"></i>
                     </button>
                 </div>
@@ -129,19 +130,20 @@
 
             <!-- Mobile Navigation -->
             <div id="mobile-menu" class="md:hidden hidden">
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900 rounded-lg mt-2">
-                    <a href="#inicio" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Início</a>
-                    <a href="#propriedades" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Propriedades</a>
-                    <a href="#investimentos" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Incorporação/Investimento</a>
-                    <a href="sinduscon.html" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Preço por m² Sinduscon</a>
-                    <a href="rs-m2-sinduscon.html" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">R$/M² Sinduscon</a>
-                    <a href="blog.html" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
-                    <a href="#sobre" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Sobre</a>
-                    <a href="#contato" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Contato</a>
-                    <div class="pt-4 border-t border-gray-700">
-                        <a href="https://wa.me/69992561830" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-yellow-400 text-black font-medium rounded-lg hover:bg-yellow-300 transition-colors">
-                            <img src="wpp.jpg" alt="WhatsApp" class="h-4 w-4">
-                            <span>WhatsApp</span>
+                <div class="px-3 pt-3 pb-4 space-y-2 bg-gray-900 rounded-lg mt-2 shadow-xl">
+                    <a href="#inicio" class="text-white hover:text-yellow-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-800 transition-colors">Início</a>
+                    <a href="#propriedades" class="text-white hover:text-yellow-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-800 transition-colors">Propriedades</a>
+                    <a href="#investimentos" class="text-white hover:text-yellow-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-800 transition-colors">Incorporação/Investimento</a>
+                    <a href="rs-m2-sinduscon.html" class="text-white hover:text-yellow-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-800 transition-colors">R$/M² Sinduscon</a>
+                    <a href="blog.html" class="text-white hover:text-yellow-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-800 transition-colors">Blog</a>
+                    <a href="#sobre" class="text-white hover:text-yellow-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-800 transition-colors">Sobre</a>
+                    <a href="#contato" class="text-white hover:text-yellow-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-800 transition-colors">Contato</a>
+                    <div class="pt-3 border-t border-gray-700">
+                        <a href="https://wa.me/69992561830" target="_blank" class="flex items-center justify-center space-x-3 px-4 py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                            </svg>
+                            <span class="text-lg">WhatsApp</span>
                         </a>
                     </div>
                 </div>
@@ -212,7 +214,7 @@
                 <!-- Lote 1C - Prudente de Moraes -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                     <div class="h-48 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center relative">
-                        <img src="1C%20-%20Prudente%20de%20Moraes/fotolote1.JPG" alt="Lote 1C - Prudente de Moraes" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="1C%20-%20Prudente%20de%20Moraes/fotolote1.JPG" alt="Lote 1C - Prudente de Moraes" class="w-full h-full object-cover" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center" style="display: none;">
                             <div class="text-center text-gray-600">
                                 <i data-lucide="image" class="h-12 w-12 mx-auto mb-2"></i>
@@ -248,10 +250,12 @@
                         
                         <div class="flex space-x-2">
                             <a href="lote1c.html" class="flex-1 px-4 py-2 bg-black text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors text-center">
-                                Ver Fotos
+                                Agendar Visita
                             </a>
-                            <a href="https://wa.me/69992561830?text=Olá! Gostaria de saber mais sobre o Lote 1C na Rua Prudente de Moraes" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-yellow-400 hover:bg-yellow-300 text-black text-sm font-medium rounded-lg transition-colors">
-                                <img src="wpp.jpg" alt="WhatsApp" class="h-4 w-4">
+                            <a href="https://wa.me/69992561830?text=Olá! Gostaria de saber mais sobre o Lote 1C na Rua Prudente de Moraes" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white text-sm font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                                </svg>
                                 <span>WhatsApp</span>
                             </a>
                         </div>
@@ -261,7 +265,7 @@
                 <!-- Lote 2C - Prudente de Moraes -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                     <div class="h-48 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center relative">
-                        <img src="2C%20-%20Prudente%20de%20Moraes/1.JPG" alt="Lote 2C - Prudente de Moraes" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="2C%20-%20Prudente%20de%20Moraes/1.JPG" alt="Lote 2C - Prudente de Moraes" class="w-full h-full object-cover" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center" style="display: none;">
                             <div class="text-center text-gray-600">
                                 <i data-lucide="image" class="h-12 w-12 mx-auto mb-2"></i>
@@ -297,10 +301,12 @@
                         
                         <div class="flex space-x-2">
                             <a href="lote2c.html" class="flex-1 px-4 py-2 bg-black text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors text-center">
-                                Ver Fotos
+                                Agendar Visita
                             </a>
-                            <a href="https://wa.me/69992561830?text=Olá! Gostaria de saber mais sobre o Lote 2C na Rua Prudente de Moraes" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-yellow-400 hover:bg-yellow-300 text-black text-sm font-medium rounded-lg transition-colors">
-                                <img src="wpp.jpg" alt="WhatsApp" class="h-4 w-4">
+                            <a href="https://wa.me/69992561830?text=Olá! Gostaria de saber mais sobre o Lote 2C na Rua Prudente de Moraes" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white text-sm font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                                </svg>
                                 <span>WhatsApp</span>
                             </a>
                         </div>
@@ -378,10 +384,12 @@
                         <div class="flex flex-col sm:flex-row gap-4">
                             <a href="https://lote10x30-10apartamentos.vercel.app/" target="_blank" class="flex-1 bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-6 rounded-lg transition-colors text-center text-lg">
                                 <i data-lucide="external-link" class="h-5 w-5 mr-2 inline"></i>
-                                Ver Projeto Completo
+                                Ver Projeto BIM Completo
                             </a>
-                            <a href="https://wa.me/69992561830?text=Olá! Gostaria de saber mais sobre o projeto 10 Apartamentos - Lote 10x30" target="_blank" class="flex items-center space-x-2 px-6 py-4 bg-yellow-400 hover:bg-yellow-300 text-black rounded-lg transition-colors">
-                                <img src="wpp.jpg" alt="WhatsApp" class="h-4 w-4">
+                            <a href="https://wa.me/69992561830?text=Olá! Gostaria de saber mais sobre o projeto 10 Apartamentos - Lote 10x30" target="_blank" class="flex items-center space-x-2 px-6 py-4 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                                </svg>
                                 <span>WhatsApp</span>
                             </a>
                         </div>
@@ -398,8 +406,10 @@
                     Entre em contato conosco para conhecer mais detalhes sobre nossos projetos de investimento imobiliário
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://wa.me/69992561830?text=Olá! Gostaria de saber mais sobre oportunidades de investimento imobiliário" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-yellow-400 text-black font-medium rounded-lg hover:bg-yellow-300 transition-colors">
-                        <img src="wpp.jpg" alt="WhatsApp" class="h-4 w-4">
+                    <a href="https://wa.me/69992561830?text=Olá! Gostaria de saber mais sobre oportunidades de investimento imobiliário" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                        </svg>
                         <span>WhatsApp</span>
                     </a>
                     <a href="#contato" class="px-8 py-4 border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black font-medium rounded-lg transition-colors">
@@ -421,8 +431,10 @@
                     Encontre o terreno perfeito para construir sua casa dos sonhos em Porto Velho
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://wa.me/69992561830" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-yellow-400 text-black font-medium rounded-lg hover:bg-yellow-300 transition-colors">
-                        <img src="wpp.jpg" alt="WhatsApp" class="h-4 w-4">
+                    <a href="https://wa.me/69992561830" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                        </svg>
                         <span>WhatsApp</span>
                     </a>
                     <a href="#sobre" class="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-black font-medium rounded-lg transition-colors">
@@ -507,29 +519,80 @@
                     </h2>
                     <div class="space-y-4 text-gray-600">
                         <p>
-                            A Bonfim Imobiliária nasceu da paixão por Porto Velho e do desejo de 
-                            oferecer um serviço diferenciado no mercado imobiliário local. 
-                            Especializamo-nos em lotes e terrenos, entendendo que cada metro 
-                            quadrado representa um sonho, um projeto ou um investimento.
+                            Surgimos em 2023 trabalhando para corretoras e incorporadoras, desenvolvendo 
+                            um modelo funcional de projetos executivos com disciplinas compatibilizadas 
+                            e orçamentos separados por etapa. Nosso diferencial é transformar a construção 
+                            em etapas de serviço claras e acessíveis.
                         </p>
                         <p>
-                            Com anos de experiência no mercado de Rondônia, nossa equipe 
-                            conhece profundamente cada bairro, suas características e potencial 
-                            de desenvolvimento. Isso nos permite oferecer assessoria especializada 
-                            e encontrar as melhores oportunidades para nossos clientes.
+                            <strong>Atuamos exclusivamente com terrenos e lotes</strong>, oferecendo 
+                            projetos BIM completos, orçamentos detalhados e acompanhamento de obra. 
+                            Conhecemos cada detalhe do mercado local de Porto Velho para garantir 
+                            a melhor avaliação e orientação para seu investimento imobiliário.
                         </p>
                         <p>
-                            Acreditamos que Porto Velho tem um potencial imenso para crescimento, 
-                            e queremos fazer parte dessa história, conectando pessoas aos lugares 
-                            onde construirão seu futuro.
+                            Ideal para quem busca investir em imóveis mas não tem experiência na 
+                            construção civil. Oferecemos acesso à informação e tecnologia BIM para 
+                            que você invista com segurança e acompanhe cada fase da construção.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mt-6">
+                        <h4 class="font-bold text-gray-900 mb-2">🎯 Nosso Diferencial</h4>
+                        <p class="text-gray-700">
+                            <strong>Projetos BIM integrados</strong> com orçamentos por etapa, 
+                            permitindo investimento gradual e acompanhamento preciso dos custos. 
+                            Especialização exclusiva em terrenos e lotes em Porto Velho.
                         </p>
                     </div>
                 </div>
                 <div class="relative">
-                    <img src="BIMTECH.jpg" alt="Bonfim Imobiliária" class="w-full h-96 object-cover rounded-2xl shadow-2xl">
+                    <img src="BIMTECH.jpg" alt="Bonfim Imobiliária - Projetos BIM" class="w-full h-96 object-cover rounded-2xl shadow-2xl" loading="lazy" decoding="async">
                     <div class="absolute -bottom-6 -left-6 bg-black text-white p-4 rounded-lg shadow-lg">
                         <p class="font-semibold">Porto Velho, RO</p>
-                        <p class="text-sm text-gray-300">Desde 2024</p>
+                        <p class="text-sm text-gray-300">Terrenos & Projetos BIM</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="mt-16">
+                <h3 class="text-3xl font-bold text-gray-900 text-center mb-12">
+                    Nossos Serviços Especializados
+                </h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+                        <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="map-pin" class="h-8 w-8 text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Terrenos & Lotes</h4>
+                        <p class="text-gray-600">
+                            Especialização exclusiva em terrenos e lotes em Porto Velho, 
+                            com avaliação precisa e conhecimento profundo do mercado local.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+                        <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="building" class="h-8 w-8 text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Projetos BIM</h4>
+                        <p class="text-gray-600">
+                            Projetos executivos integrados com todas as disciplinas 
+                            compatibilizadas: arquitetura, estrutural, hidrosanitário, 
+                            elétrico e HVAC.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+                        <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="calculator" class="h-8 w-8 text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Orçamentos por Etapa</h4>
+                        <p class="text-gray-600">
+                            Orçamentos detalhados separados por etapa de serviço, 
+                            permitindo investimento gradual e acompanhamento preciso dos custos.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -588,7 +651,9 @@
 
             <div class="text-center mt-12">
                 <a href="https://wa.me/69992561830" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-yellow-400 text-black font-medium rounded-lg hover:bg-yellow-300 transition-colors">
-                    <img src="wpp.jpg" alt="WhatsApp" class="h-4 w-4">
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                    </svg>
                     <span>WhatsApp</span>
                 </a>
             </div>
