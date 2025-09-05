@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, Home, Search, BarChart3, Building, Info, Phone } from 'lucide-react'
+import { Menu, X, Home, Search, BarChart3, Building, Info, Phone, Calculator } from 'lucide-react'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -11,6 +11,7 @@ const Navbar = () => {
     { name: 'Propriedades', href: '/properties', icon: Building },
     { name: 'Buscar', href: '/search', icon: Search },
     { name: 'Análise', href: '/market-analysis', icon: BarChart3 },
+    { name: 'Sinduscon', href: '/sinduscon', icon: Calculator },
     { name: 'Sobre', href: '/about', icon: Info },
   ]
 

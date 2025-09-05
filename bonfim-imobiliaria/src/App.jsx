@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import SearchProperties from './pages/SearchProperties'
 import MarketAnalysis from './pages/MarketAnalysis'
 import Properties from './pages/Properties'
+import Sinduscon from './pages/Sinduscon'
 import About from './pages/About'
 import './App.css'
 
@@ -19,6 +20,7 @@ function App() {
             <Route path="/search" element={<SearchProperties />} />
             <Route path="/market-analysis" element={<MarketAnalysis />} />
             <Route path="/properties" element={<Properties />} />
+            <Route path="/sinduscon" element={<Sinduscon />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </main>
