@@ -3,14 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonfim Imobiliária - Porto Velho, RO</title>
-    <meta name="description" content="Bonfim Imobiliária especializada em lotes e terrenos em Porto Velho, Rondônia. Encontre o terreno ideal para seu investimento.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Bonfim Imobiliária e Engenharia - Lotes e Terrenos em Porto Velho, RO</title>
+    <meta name="description" content="Bonfim Imobiliária e Engenharia especializada em lotes e terrenos em Porto Velho, Rondônia. Encontre o terreno ideal para seu investimento com localização premium no centro da cidade.">
+    <meta name="keywords" content="imobiliária, terrenos, lotes, Porto Velho, Rondônia, investimento imobiliário, Bonfim Imobiliária, Engenharia, centro, localização premium">
+    <meta name="author" content="Bonfim Imobiliária e Engenharia">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="pt-BR">
+    <meta name="geo.region" content="BR-RO">
+    <meta name="geo.placename" content="Porto Velho">
+    <meta name="geo.position" content="-8.76116;-63.902">
+    <meta name="ICBM" content="-8.76116, -63.902">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bonfimimobiliaria.com.br/">
+    <meta property="og:title" content="Bonfim Imobiliária e Engenharia - Porto Velho, RO">
+    <meta property="og:description" content="Especializada em lotes e terrenos em Porto Velho, Rondônia. Encontre o terreno ideal para seu investimento com localização premium.">
+    <meta property="og:image" content="https://bonfimimobiliaria.com.br/BIMTECH.jpg">
+    <meta property="og:site_name" content="Bonfim Imobiliária e Engenharia">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bonfimimobiliaria.com.br/">
+    <meta property="twitter:title" content="Bonfim Imobiliária e Engenharia - Porto Velho, RO">
+    <meta property="twitter:description" content="Especializada em lotes e terrenos em Porto Velho, Rondônia. Encontre o terreno ideal para seu investimento.">
+    <meta property="twitter:image" content="https://bonfimimobiliaria.com.br/BIMTECH.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//unpkg.com">
+    <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
+    
+    <!-- Google Fonts with display=swap for better performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -20,6 +65,54 @@
     
     <!-- Dados dos bairros e propriedades -->
     <script src="data.js"></script>
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "name": "Bonfim Imobiliária e Engenharia",
+        "description": "Especializada em lotes e terrenos em Porto Velho, Rondônia",
+        "url": "https://bonfimimobiliaria.com.br",
+        "telephone": "+5569992561830",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Velho",
+            "addressRegion": "RO",
+            "addressCountry": "BR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-8.76116",
+            "longitude": "-63.902"
+        },
+        "sameAs": [
+            "https://wa.me/69992561830"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Lotes e Terrenos",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "RealEstateListing",
+                        "name": "Lote 1C - Rua Prudente de Moraes",
+                        "description": "384m² no centro de Porto Velho com estruturas aproveitáveis"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "RealEstateListing",
+                        "name": "Lote 2C - Rua Prudente de Moraes",
+                        "description": "300m² (10x30) no centro de Porto Velho, terreno livre"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
     
     <style>
         :root {
@@ -89,12 +182,12 @@
     <!-- Navigation -->
     <nav class="bg-black shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
-            <div class="flex justify-between items-center h-14 sm:h-16">
+            <div class="flex justify-between items-center h-18 sm:h-20">
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center space-x-2 sm:space-x-3">
-                    <img src="BIMTECH.jpg" alt="Bonfim Imobiliária" class="h-8 w-8 sm:h-10 sm:w-10 rounded-lg">
+                    <img src="BIMTECH.jpg" alt="Bonfim Imobiliária e Engenharia" class="h-8 w-8 sm:h-10 sm:w-10 rounded-lg">
                     <div>
-                        <h1 class="text-sm sm:text-xl font-bold text-yellow-400 leading-tight">Bonfim Imobiliária</h1>
+                        <h1 class="text-sm sm:text-xl font-bold text-yellow-400 leading-tight">Bonfim Imobiliária e Engenharia</h1>
                         <p class="text-xs text-gray-400 hidden sm:block">Porto Velho, RO</p>
                     </div>
                 </a>
@@ -103,7 +196,7 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#inicio" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Início</a>
                     <a href="#propriedades" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Propriedades</a>
-                    <a href="#investimentos" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Incorporação/Investimento</a>
+                    <a href="#investimentos" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Engenharia</a>
                     <a href="rs-m2-sinduscon.html" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">R$/M² Sinduscon</a>
                     <a href="blog.html" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Blog</a>
                     <a href="#sobre" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Sobre</a>
@@ -133,7 +226,7 @@
                 <div class="px-3 pt-3 pb-4 space-y-2 bg-gray-900 rounded-lg mt-2 shadow-xl">
                     <a href="#inicio" class="text-white hover:text-yellow-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-800 transition-colors">Início</a>
                     <a href="#propriedades" class="text-white hover:text-yellow-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-800 transition-colors">Propriedades</a>
-                    <a href="#investimentos" class="text-white hover:text-yellow-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-800 transition-colors">Incorporação/Investimento</a>
+                    <a href="#investimentos" class="text-white hover:text-yellow-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-800 transition-colors">Engenharia</a>
                     <a href="rs-m2-sinduscon.html" class="text-white hover:text-yellow-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-800 transition-colors">R$/M² Sinduscon</a>
                     <a href="blog.html" class="text-white hover:text-yellow-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-800 transition-colors">Blog</a>
                     <a href="#sobre" class="text-white hover:text-yellow-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-800 transition-colors">Sobre</a>
@@ -152,7 +245,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="inicio" class="relative h-screen hero-bg">
+    <section id="inicio" class="relative h-screen" style="background-image: url('portovelho.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="absolute inset-0 bg-black bg-opacity-70"></div>
         <div class="relative z-10 h-full flex items-center justify-center">
             <div class="text-center text-white max-w-4xl mx-auto px-4">
@@ -450,7 +543,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-black mb-4">
-                    Por que Escolher a Bonfim Imobiliária?
+                    Por que Escolher a Bonfim Imobiliária e Engenharia?
                 </h2>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">
                     Especialistas em lotes e terrenos com anos de experiência no mercado
@@ -515,7 +608,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <h2 class="text-3xl font-bold text-black mb-6">
-                        Sobre a Bonfim Imobiliária
+                        Sobre a Bonfim Imobiliária e Engenharia
                     </h2>
                     <div class="space-y-4 text-gray-600">
                         <p>
@@ -665,14 +758,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center space-x-3 mb-4 md:mb-0">
-                    <img src="BIMTECH.jpg" alt="Bonfim Imobiliária" class="h-8 w-8 rounded">
+                    <img src="BIMTECH.jpg" alt="Bonfim Imobiliária e Engenharia" class="h-8 w-8 rounded">
                     <div>
-                        <p class="font-semibold text-yellow-400">Bonfim Imobiliária</p>
+                        <p class="font-semibold text-yellow-400">Bonfim Imobiliária e Engenharia</p>
                         <p class="text-sm text-gray-400">Porto Velho, RO</p>
                     </div>
                 </div>
                 <p class="text-gray-400 text-sm">
-                    © 2024 Bonfim Imobiliária. Todos os direitos reservados.
+                    © 2024 Bonfim Imobiliária e Engenharia. Todos os direitos reservados.
                 </p>
             </div>
         </div>

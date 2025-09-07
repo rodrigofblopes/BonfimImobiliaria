@@ -57,5 +57,5 @@ http://localhost:8000
 ## 📞 Contato
 
 - **WhatsApp**: (69) 99999-9999
-- **Email**: contato@bonfimimobiliaria.com.br
+- **Email**: engrodrigofblopes@gmail.com
 - **Localização**: Porto Velho, RO
