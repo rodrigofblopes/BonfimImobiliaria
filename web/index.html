@@ -20,44 +20,74 @@
     <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
     <meta
       name="description"
-      content="Imóveis em ipatinga, imobiliaria ipatinga, venda, locação de imoveis residenciais, comerciais e rurais, minas gerais, vale do aço, imobiliaria em ipatinga mg, imobiliarias no brasil, imobiliária em minas gerais, administração de imóveis - Lage Imóveis CRECI 1915"
+      content="Bonfim Imobiliária e Engenharia - Terrenos em Porto Velho, Rondônia. Especialistas em venda de lotes residenciais e comerciais no centro da cidade. Documentação regularizada e pronto para construir."
     />
     <meta
       name="keywords"
-      content="imovel, imoveis, apartamentos, casa, lotes, lage, imobiliárias, imobiliaria, coberturas, casas, loteamentos, aluguel, vendas, empreendimentos, imovel na planta,montagem, ipatinga, coronel fabriciano, timoteo, minas gerais, vale do aço, industria, mercado, empresas, grupo, investimento"
+      content="imobiliaria, terrenos, porto velho, rondonia, lotes, venda, centro, documentacao, regularizada, bonfim, engenharia, investimento, comercial, residencial"
     />
 
     <!-- iOS meta tags & icons -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="site_lage" />
-    <link rel="apple-touch-icon" href="icons/favicon.ico" />
+    <meta name="apple-mobile-web-app-title" content="Bonfim Imobiliária" />
+    <link rel="apple-touch-icon" href="icons/BIMTECH.jpg" />
+    
+    <!-- Splash screen para iOS -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-startup-image" href="icons/BIMTECH.jpg" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="icons/favicon.ico" />
+    <link rel="shortcut icon" type="image/jpeg" href="icons/BIMTECH.jpg" />
+    <link rel="icon" type="image/jpeg" href="icons/BIMTECH.jpg" />
 
-    <title>Lage Imóveis</title>
+    <title>Bonfim Imobiliária e Engenharia</title>
     <link rel="manifest" href="manifest.json" />
 
     <style>
+      body {
+        background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      
+      .splash-container {
+        text-align: center;
+        color: white;
+      }
+      
       .pulse {
-        width: 200px;
-        animation: pulse 0.7s infinite;
-        margin: 0 auto;
-        display: table;
-        margin-top: 50px;
+        width: 250px;
+        height: auto;
+        animation: pulse 2s ease-in-out infinite;
+        margin: 0 auto 30px;
+        display: block;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         animation-direction: alternate;
         -webkit-animation-name: pulse;
         animation-name: pulse;
       }
 
+      .loading-text {
+        font-size: 18px;
+        font-weight: 300;
+        opacity: 0.9;
+        margin-top: 20px;
+      }
+
       @-webkit-keyframes pulse {
         0% {
           -webkit-transform: scale(1);
-          -webkit-filter: brightness(80%);
+          -webkit-filter: brightness(90%);
         }
         100% {
-          -webkit-transform: scale(1.1);
+          -webkit-transform: scale(1.05);
           -webkit-filter: brightness(100%);
         }
       }
@@ -65,10 +95,10 @@
       @keyframes pulse {
         0% {
           transform: scale(1);
-          filter: brightness(80%);
+          filter: brightness(90%);
         }
         100% {
-          transform: scale(1.1);
+          transform: scale(1.05);
           filter: brightness(100%);
         }
       }
@@ -99,8 +129,9 @@
       firebase.analytics();
     </script>
 
-    <div>
-      <img src="assets/assets/logo/Lage.png" class="pulse" />
+    <div class="splash-container">
+      <img src="icons/BIMTECH.jpg" class="pulse" alt="Bonfim Imobiliária e Engenharia" />
+      <div class="loading-text">Carregando...</div>
     </div>
 
     <script>

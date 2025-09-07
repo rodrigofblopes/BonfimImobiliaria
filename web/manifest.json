@@ -1,11 +1,11 @@
 {
-    "name": "site_lage",
-    "short_name": "site_lage",
+    "name": "Bonfim Imobiliária e Engenharia",
+    "short_name": "Bonfim Imobiliária",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#1a365d",
+    "theme_color": "#1a365d",
+    "description": "Bonfim Imobiliária e Engenharia - Terrenos em Porto Velho, Rondônia",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
