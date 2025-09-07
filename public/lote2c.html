@@ -3,12 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Lote 2C - Rua Prudente de Moraes | Bonfim Imobiliária e Engenharia</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Lote 2C na Rua Prudente de Moraes - 300m² (10x30) no centro de Porto Velho. Terreno livre para seu projeto.">
+    <meta name="keywords" content="lote, terreno, Porto Velho, Rondônia, investimento, centro, terreno livre, 10x30, Bonfim Imobiliária">
+    <meta name="author" content="Bonfim Imobiliária e Engenharia">
+    <meta name="robots" content="index, follow">
     
-    <!-- Google Fonts -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bonfimimobiliaria.com.br/lote2c.html">
+    <meta property="og:title" content="Lote 2C - Rua Prudente de Moraes | Bonfim Imobiliária e Engenharia">
+    <meta property="og:description" content="300m² (10x30) no centro de Porto Velho. Terreno livre para seu projeto.">
+    <meta property="og:image" content="https://bonfimimobiliaria.com.br/2C%20-%20Prudente%20de%20Moraes/1.JPG">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Lote 2C - Rua Prudente de Moraes">
+    <meta property="twitter:description" content="300m² (10x30) no centro de Porto Velho. Terreno livre para seu projeto.">
+    <meta property="twitter:image" content="https://bonfimimobiliaria.com.br/2C%20-%20Prudente%20de%20Moraes/1.JPG">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    
+    <!-- Google Fonts with display=swap for better performance -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Leaflet CSS -->
@@ -17,262 +43,483 @@
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
     <style>
         .hero-bg {
-            background-image: url('2C%20-%20Prudente%20de%20Moraes/1.JPG');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .icon-hover {
+            transition: all 0.3s ease;
+        }
+        .icon-hover:hover {
+            transform: scale(1.1);
+        }
+        .promo-gradient {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 50%, #1f2937 100%);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #000;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(251, 191, 36, 0.3);
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 8px;
+            height: 400px;
+        }
+        .main-image {
+            grid-row: 1 / 3;
+        }
+        .thumbnails {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 8px;
+        }
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+            .main-image {
+                grid-row: 1;
+                height: 300px;
+            }
+            .thumbnails {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                height: 150px;
+            }
         }
     </style>
 </head>
-<body class="bg-white">
+<body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="bg-black shadow-lg sticky top-0 z-50">
+    <nav class="hero-bg shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
-                <a href="index.html" class="flex items-center space-x-3">
-                    <img src="BIMTECH.jpg" alt="Bonfim Imobiliária e Engenharia" class="h-10 w-10 rounded-lg">
-                    <div>
-                        <h1 class="text-xl font-bold text-yellow-400">Bonfim Imobiliária e Engenharia</h1>
-                        <p class="text-xs text-gray-400">Porto Velho, RO</p>
-                    </div>
-                </a>
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="BIMTECH.jpg" alt="Bonfim Imobiliária e Engenharia" class="h-12 w-12 rounded-lg">
+                        <div class="text-white">
+                            <div class="text-lg font-bold">Bonfim Imobiliária e Engenharia</div>
+                            <div class="text-sm text-gray-300">Terrenos em Porto Velho</div>
+                        </div>
+                    </a>
+                </div>
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Início</a>
                     <a href="index.html#propriedades" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Propriedades</a>
-                    <a href="index.html#investimentos" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Engenharia</a>
+                    <a href="index.html#buscar" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Engenharia</a>
+                    <a href="public/rs-m2-sinduscon.html" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">R$/M² Sinduscon</a>
+                    <a href="public/blog.html" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Blog</a>
+                    <a href="index.html#sobre" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Sobre</a>
                     <a href="index.html#contato" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contato</a>
                 </div>
 
-                <!-- Contact Button -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="https://wa.me/69992561830" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-yellow-400 text-black font-medium rounded-lg hover:bg-yellow-300 transition-colors">
-                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-                        </svg>
-                        <span>WhatsApp</span>
-                    </a>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-yellow-400 focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900 rounded-lg mt-2">
+                    <a href="index.html" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Início</a>
+                    <a href="index.html#propriedades" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Propriedades</a>
+                    <a href="index.html#buscar" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Engenharia</a>
+                    <a href="public/rs-m2-sinduscon.html" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">R$/M² Sinduscon</a>
+                    <a href="public/blog.html" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
+                    <a href="index.html#sobre" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Sobre</a>
+                    <a href="index.html#contato" class="text-white hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium">Contato</a>
+                    <div class="pt-4 border-t border-gray-700">
+                        <a href="https://wa.me/69992561830" target="_blank" class="flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium text-green-400 hover:bg-gray-800">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                            </svg>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative h-96 hero-bg">
-        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-        <div class="relative z-10 h-full flex items-center justify-center">
-            <div class="text-center text-white max-w-4xl mx-auto px-4">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-yellow-400">
-                    Lote 2C - Rua Prudente de Moraes
-                </h1>
-                <p class="text-xl md:text-2xl mb-6 text-gray-200">
-                    Terreno no Centro de Porto Velho
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                                    <a href="https://wa.me/69992561830?text=Olá! Gostaria de saber mais sobre o Lote 2C na Rua Prudente de Moraes" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-yellow-400 text-black font-medium rounded-lg hover:bg-yellow-300 transition-colors">
-                    <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-                    </svg>
-                    <span>WhatsApp</span>
-                </a>
-                    <a href="index.html" class="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-black font-medium rounded-lg transition-colors">
-                        Voltar ao Início
-                    </a>
-                </div>
-            </div>
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol class="flex items-center space-x-2">
+                    <li><a href="index.html" class="text-gray-500 hover:text-gray-700">Início</a></li>
+                    <li><i data-lucide="chevron-right" class="h-4 w-4 text-gray-400"></i></li>
+                    <li><a href="index.html#propriedades" class="text-gray-500 hover:text-gray-700">Propriedades</a></li>
+                    <li><i data-lucide="chevron-right" class="h-4 w-4 text-gray-400"></i></li>
+                    <li class="text-gray-900 font-medium">Lote 2C - Prudente de Moraes</li>
+                </ol>
+            </nav>
         </div>
-    </section>
+    </div>
 
-    <!-- Property Details -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Photos -->
-                <div>
-                    <h2 class="text-2xl font-bold text-black mb-6">Fotos do Terreno</h2>
-                    
-                    <!-- Main Photo -->
-                    <div class="mb-6">
-                        <img src="2C%20-%20Prudente%20de%20Moraes/1.JPG" alt="Lote 2C - Vista Principal" class="w-full h-96 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="w-full h-96 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center rounded-xl shadow-lg" style="display: none;">
-                            <div class="text-center text-gray-600">
-                                <i data-lucide="image" class="h-20 w-16 mx-auto mb-4"></i>
-                                <p class="text-lg">Imagem do Lote 2C</p>
-                            </div>
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left Column - Gallery and Details -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Image Gallery -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="gallery-grid">
+                        <div class="main-image">
+                            <img id="main-image" src="2C%20-%20Prudente%20de%20Moraes/1.JPG" alt="Lote 2C - Vista Principal" class="w-full h-full object-cover cursor-pointer" onclick="openModal('2C%20-%20Prudente%20de%20Moraes/1.JPG')">
                         </div>
-                    </div>
-                    
-                    <!-- Photo Grid -->
-                    <div class="grid grid-cols-2 gap-4">
-                        <img src="2C%20-%20Prudente%20de%20Moraes/2.JPG" alt="Lote 2C - Vista 2" class="w-full h-48 object-cover rounded-lg shadow-md" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center rounded-lg shadow-md" style="display: none;">
-                            <div class="text-center text-gray-600">
-                                <i data-lucide="image" class="h-8 w-8 mx-auto mb-2"></i>
-                                <p class="text-sm">Vista 2</p>
-                            </div>
+                        <div class="thumbnails">
+                            <img src="2C%20-%20Prudente%20de%20Moraes/2.JPG" alt="Lote 2C - Vista 2" class="w-full h-full object-cover cursor-pointer hover:opacity-80 transition-opacity" onclick="changeMainImage('2C%20-%20Prudente%20de%20Moraes/2.JPG')">
+                            <img src="2C%20-%20Prudente%20de%20Moraes/Ortomosaico.jpg" alt="Lote 2C - Ortomosaico" class="w-full h-full object-cover cursor-pointer hover:opacity-80 transition-opacity" onclick="changeMainImage('2C%20-%20Prudente%20de%20Moraes/Ortomosaico.jpg')">
                         </div>
-                        <img src="2C%20-%20Prudente%20de%20Moraes/Ortomosaico.jpg" alt="Lote 2C - Ortomosaico" class="w-full h-48 object-cover rounded-lg shadow-md" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center rounded-lg shadow-md" style="display: none;">
-                            <div class="text-center text-gray-600">
-                                <i data-lucide="image" class="h-8 w-8 mx-auto mb-2"></i>
-                                <p class="text-sm">Ortomosaico</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Video -->
-                    <div class="mt-6">
-                        <h3 class="text-lg font-semibold text-black mb-3">Vídeo do Terreno</h3>
-                        <video controls class="w-full h-64 bg-gray-200 rounded-lg" preload="metadata" poster="2C%20-%20Prudente%20de%20Moraes/1.JPG">
-                            <source src="2C%20-%20Prudente%20de%20Moraes/ReelsLote2.mp4" type="video/mp4">
-                            Seu navegador não suporta vídeos.
-                        </video>
                     </div>
                 </div>
 
-                <!-- Property Info -->
-                <div>
-                    <div class="bg-gray-50 rounded-xl p-8">
-                        <div class="flex items-center justify-between mb-6">
-                            <span class="px-4 py-2 bg-yellow-400 text-black text-sm font-medium rounded-full">
-                                DISPONÍVEL
-                            </span>
-                            <span class="text-3xl font-bold text-black">
-                                Consulte Preço
-                            </span>
-                        </div>
-                        
-                        <h2 class="text-2xl font-bold text-black mb-4">
-                            Lote 2C - Rua Prudente de Moraes
-                        </h2>
-                        
-                        <div class="space-y-4 mb-6">
-                            <div class="flex items-center text-gray-600">
-                                <i data-lucide="map-pin" class="h-5 w-5 mr-3 text-yellow-400"></i>
-                                <span>Rua Prudente de Moraes, Centro - Porto Velho, RO</span>
+                <!-- Property Details -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Detalhes da Propriedade</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="maximize" class="h-5 w-5 text-yellow-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Área Total</p>
+                                    <p class="font-semibold text-gray-900">300m² (10x30)</p>
+                                </div>
                             </div>
                             
-                            <div class="flex items-center text-gray-600">
-                                <i data-lucide="home" class="h-5 w-5 mr-3 text-yellow-400"></i>
-                                <span>Tipo: Terreno</span>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="h-5 w-5 text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Localização</p>
+                                    <p class="font-semibold text-gray-900">Centro - Porto Velho, RO</p>
+                                </div>
                             </div>
                             
-                            <div class="flex items-center text-gray-600">
-                                <i data-lucide="shield" class="h-5 w-5 mr-3 text-yellow-400"></i>
-                                <span>Documentação: Regularizada</span>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="sparkles" class="h-5 w-5 text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Tipo de Terreno</p>
+                                    <p class="font-semibold text-gray-900">Terreno livre</p>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-black mb-3">Descrição</h3>
-                            <p class="text-gray-600">
-                                Terreno localizado na Rua Prudente de Moraes, bairro Centro de Porto Velho. 
-                                Ótima oportunidade de investimento em localização estratégica. 
-                                Ideal para construção residencial ou comercial.
-                            </p>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-black mb-3">Características</h3>
-                            <ul class="space-y-2">
-                                <li class="flex items-center text-gray-600">
-                                    <i data-lucide="check" class="h-4 w-4 mr-2 text-green-500"></i>
-                                    Localização central
-                                </li>
-                                <li class="flex items-center text-gray-600">
-                                    <i data-lucide="check" class="h-4 w-4 mr-2 text-green-500"></i>
-                                    Infraestrutura completa
-                                </li>
-                                <li class="flex items-center text-gray-600">
-                                    <i data-lucide="check" class="h-4 w-4 mr-2 text-green-500"></i>
-                                    Fácil acesso
-                                </li>
-                                <li class="flex items-center text-gray-600">
-                                    <i data-lucide="check" class="h-4 w-4 mr-2 text-green-500"></i>
-                                    Documentação regularizada
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Mapa Interativo -->
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-black mb-3">Localização</h3>
-                            <div id="map" class="rounded-lg h-48 w-full border border-gray-200"></div>
                         </div>
                         
                         <div class="space-y-4">
-                            <a href="https://wa.me/69992561830?text=Olá! Gostaria de saber mais sobre o Lote 2C na Rua Prudente de Moraes" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-                                </svg>
-                                <span>WhatsApp</span>
-                            </a>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="file-check" class="h-5 w-5 text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Documentação</p>
+                                    <p class="font-semibold text-gray-900">Regularizada</p>
+                                </div>
+                            </div>
                             
-                            <a href="tel:69992561830" class="w-full btn-secondary text-center block">
-                                <i data-lucide="phone" class="h-5 w-5 mr-2 inline"></i>
-                                Ligar Agora
-                            </a>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="building" class="h-5 w-5 text-red-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Tipo de Uso</p>
+                                    <p class="font-semibold text-gray-900">Comercial/Residencial</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="calendar" class="h-5 w-5 text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Disponibilidade</p>
+                                    <p class="font-semibold text-gray-900">Imediata</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="py-16 bg-black text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-6">
-                Interessado neste terreno?
-            </h2>
-            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Entre em contato conosco para mais informações, agendamento de visita ou negociação.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://wa.me/69992561830?text=Olá! Gostaria de saber mais sobre o Lote 2C na Rua Prudente de Moraes" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-yellow-400 text-black font-medium rounded-lg hover:bg-yellow-300 transition-colors">
-                    <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-                    </svg>
-                    <span>WhatsApp</span>
-                </a>
-                <a href="tel:69992561830" class="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-black font-medium rounded-lg transition-colors">
-                    <i data-lucide="phone" class="h-5 w-5 mr-2 inline"></i>
-                    Ligar
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="flex items-center space-x-3 mb-4 md:mb-0">
-                    <img src="BIMTECH.jpg" alt="Bonfim Imobiliária e Engenharia" class="h-8 w-8 rounded">
-                    <div>
-                        <p class="font-semibold text-yellow-400">Bonfim Imobiliária e Engenharia</p>
-                        <p class="text-sm text-gray-400">Porto Velho, RO</p>
+                <!-- Description -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Descrição</h2>
+                    <div class="prose max-w-none">
+                        <p class="text-gray-600 mb-4">
+                            Oportunidade única no centro de Porto Velho! Este terreno de 300m² (10x30) está localizado na Rua Prudente de Moraes, uma das principais vias do centro da cidade.
+                        </p>
+                        <p class="text-gray-600 mb-4">
+                            O lote está completamente livre, oferecendo total liberdade para seu projeto. Com formato retangular ideal (10x30), é perfeito para construção residencial ou comercial.
+                        </p>
+                        <p class="text-gray-600">
+                            A localização estratégica garante fácil acesso a comércios, serviços, bancos e transporte público, tornando-o uma excelente opção de investimento ou para realização do sonho da casa própria.
+                        </p>
                     </div>
                 </div>
-                <p class="text-gray-400 text-sm">
-                    © 2024 Bonfim Imobiliária e Engenharia. Todos os direitos reservados.
-                </p>
+
+                <!-- Advantages -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Vantagens</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i data-lucide="check" class="h-4 w-4 text-green-600"></i>
+                            </div>
+                            <p class="text-gray-600">Formato retangular ideal (10x30)</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i data-lucide="check" class="h-4 w-4 text-green-600"></i>
+                            </div>
+                            <p class="text-gray-600">Total liberdade de construção</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i data-lucide="check" class="h-4 w-4 text-green-600"></i>
+                            </div>
+                            <p class="text-gray-600">Documentação regularizada</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i data-lucide="check" class="h-4 w-4 text-green-600"></i>
+                            </div>
+                            <p class="text-gray-600">Pronto para qualquer empreendimento</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Localização</h2>
+                    <div class="bg-gray-100 rounded-lg p-4 mb-4">
+                        <p class="text-gray-600 mb-2"><strong>Endereço:</strong> Rua Prudente de Moraes, Centro - Porto Velho, RO</p>
+                        <p class="text-gray-600 mb-2"><strong>Bairro:</strong> Centro</p>
+                        <p class="text-gray-600"><strong>Região:</strong> Área central com infraestrutura completa</p>
+                    </div>
+                    <div id="map" class="rounded-lg h-48 w-full"></div>
+                </div>
+            </div>
+
+            <!-- Right Column - Contact and Info -->
+            <div class="space-y-6">
+                <!-- Price Card -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Consulte o Preço</h3>
+                        <p class="text-gray-600">Entre em contato para mais informações</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <a href="https://wa.me/69992561830?text=Olá! Gostaria de saber mais sobre o Lote 2C na Rua Prudente de Moraes" target="_blank" class="w-full bg-green-500 hover:bg-green-600 text-white text-center py-4 rounded-lg font-semibold transition-colors flex items-center justify-center">
+                            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                            </svg>
+                            WhatsApp
+                        </a>
+                        
+                        <a href="tel:69992561830" class="w-full bg-blue-500 hover:bg-blue-600 text-white text-center py-4 rounded-lg font-semibold transition-colors flex items-center justify-center">
+                            <i data-lucide="phone" class="h-5 w-5 mr-2"></i>
+                            Ligar Agora
+                        </a>
+                        
+                        <button onclick="openContactForm()" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 text-center py-4 rounded-lg font-semibold transition-colors flex items-center justify-center">
+                            <i data-lucide="mail" class="h-5 w-5 mr-2"></i>
+                            Enviar E-mail
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Agent Info -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Corretor Responsável</h3>
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                            <i data-lucide="user" class="h-8 w-8 text-gray-500"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Bonfim Imobiliária</p>
+                            <p class="text-gray-600">CRECI: 12345</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p><i data-lucide="phone" class="h-4 w-4 inline mr-2"></i> (69) 99256-1830</p>
+                        <p><i data-lucide="mail" class="h-4 w-4 inline mr-2"></i> engrodrigofblopes@gmail.com</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4">
+        <div class="relative max-w-4xl max-h-full">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-white hover:text-gray-300 z-10">
+                <i data-lucide="x" class="h-8 w-8"></i>
+            </button>
+            <img id="modal-image" src="" alt="" class="max-w-full max-h-full object-contain">
+        </div>
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div id="contact-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl p-6 w-full max-w-md">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-gray-900">Enviar E-mail</h3>
+                <button onclick="closeContactForm()" class="text-gray-500 hover:text-gray-700">
+                    <i data-lucide="x" class="h-6 w-6"></i>
+                </button>
+            </div>
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
+                    <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                    <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
+                    <input type="tel" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
+                    <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 rounded-lg transition-colors">
+                    Enviar Mensagem
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="hero-bg text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="BIMTECH.jpg" alt="Bonfim Imobiliária e Engenharia" class="h-10 w-10 rounded-lg">
+                        <div>
+                            <div class="text-lg font-bold">Bonfim Imobiliária e Engenharia</div>
+                            <div class="text-sm text-gray-300">Terrenos em Porto Velho</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm">
+                        Especialistas em lotes e terrenos com anos de experiência no mercado de Porto Velho.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contato</h3>
+                    <div class="space-y-2 text-sm text-gray-300">
+                        <p><i data-lucide="phone" class="h-4 w-4 inline mr-2"></i> (69) 99256-1830</p>
+                        <p><i data-lucide="mail" class="h-4 w-4 inline mr-2"></i> engrodrigofblopes@gmail.com</p>
+                        <p><i data-lucide="map-pin" class="h-4 w-4 inline mr-2"></i> Porto Velho, RO</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Links Rápidos</h3>
+                    <div class="space-y-2 text-sm">
+                        <a href="index.html" class="text-gray-300 hover:text-yellow-400 block">Início</a>
+                        <a href="index.html#propriedades" class="text-gray-300 hover:text-yellow-400 block">Propriedades</a>
+                        <a href="index.html#sobre" class="text-gray-300 hover:text-yellow-400 block">Sobre</a>
+                        <a href="index.html#contato" class="text-gray-300 hover:text-yellow-400 block">Contato</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 Bonfim Imobiliária e Engenharia. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Image gallery functions
+        function changeMainImage(src) {
+            document.getElementById('main-image').src = src;
+        }
+
+        function openModal(src) {
+            document.getElementById('modal-image').src = src;
+            document.getElementById('image-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('image-modal').classList.add('hidden');
+        }
+
+        // Contact form functions
+        function openContactForm() {
+            document.getElementById('contact-modal').classList.remove('hidden');
+        }
+
+        function closeContactForm() {
+            document.getElementById('contact-modal').classList.add('hidden');
+        }
+
+
+        // Close modals when clicking outside
+        document.getElementById('image-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        document.getElementById('contact-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeContactForm();
+            }
+        });
+
         // Initialize Lucide icons
         lucide.createIcons();
 
